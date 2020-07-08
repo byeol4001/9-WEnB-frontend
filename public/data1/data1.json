@@ -1,0 +1,117 @@
+{
+  "stay_list": [
+    {
+      "house_id": "1",
+      "house_name": "제주시 바닷가 앞 2층 감성숙소",
+      "house_images": [
+        "https://a0.muscache.com/im/pictures/783af174-a945-4461-bed8-1f9525bc60b8.jpg?aki_policy=xx_large",
+        "https://a0.muscache.com/im/pictures/2661b711-0ac6-4c94-ba2f-0d453b2d6ecd.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/a7f87f24-f382-418b-aaca-a4a8b14e2fc4.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/60b23cbe-96c0-4d7a-9bc8-78178251269d.jpg?im_w=1680",
+        "https://a0.muscache.com/im/pictures/3e04c422-fd12-4c38-a91b-2db1d860b6cb.jpg?im_w=1680"
+      ],
+      "house_address": "Samyangsam-dong,Cheju",
+      "house_type": "전원주택 전체",
+      "house_capacity": 4,
+      "house_num_of_bedroom": 2,
+      "house_num_of_bed": 1,
+      "house_num_of_bathroom": 1,
+      "house_rating": 4.79,
+      "house_superhost": true,
+      "latitude": 33.4366652,
+      "longitude": 126.5333312,
+      "latlng": "new kakao.maps.LatLng(33.950705, 126.570677)"
+
+    },
+    {
+      "house_id": "2",
+      "house_name": "벤조롱 달빛정원",
+      "house_images": [
+        "https://a0.muscache.com/im/pictures/e5239935-e216-4222-bffe-9b22e3e8411e.jpg?aki_policy=xx_large",
+        "https://a0.muscache.com/im/pictures/0a79881e-0fad-4876-86c7-cfee0aee9871.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/a7f87f24-f382-418b-aaca-a4a8b14e2fc4.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/60b23cbe-96c0-4d7a-9bc8-78178251269d.jpg?im_w=1680",
+        "https://a0.muscache.com/im/pictures/3e04c422-fd12-4c38-a91b-2db1d860b6cb.jpg?im_w=1680"
+      ],
+      "house_address": "Samyangsam-dong,Cheju",
+      "house_type": "전원주택 전체",
+      "house_capacity": 4,
+      "house_num_of_bedroom": 2,
+      "house_num_of_bed": 1,
+      "house_num_of_bathroom": 1,
+      "house_rating": 4.79,
+      "house_superhost": true,
+      "latitude": 33.3766652,
+      "longitude": 126.5633312,
+      "latlng": "new kakao.maps.LatLng(33.160705, 126.560677)"
+    },
+    {
+      "house_id": "3",
+      "house_name": "제주시 바닷가 앞 2층 감성숙소",
+      "house_images": [
+        "https://a0.muscache.com/im/pictures/783af174-a945-4461-bed8-1f9525bc60b8.jpg?aki_policy=xx_large",
+        "https://a0.muscache.com/im/pictures/2661b711-0ac6-4c94-ba2f-0d453b2d6ecd.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/a7f87f24-f382-418b-aaca-a4a8b14e2fc4.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/60b23cbe-96c0-4d7a-9bc8-78178251269d.jpg?im_w=1680",
+        "https://a0.muscache.com/im/pictures/3e04c422-fd12-4c38-a91b-2db1d860b6cb.jpg?im_w=1680"
+      ],
+      "house_address": "Samyangsam-dong,Cheju",
+      "house_type": "전원주택 전체",
+      "house_capacity": 4,
+      "house_num_of_bedroom": 2,
+      "house_num_of_bed": 1,
+      "house_num_of_bathroom": 1,
+      "house_rating": 4.79,
+      "house_superhost": true,
+      "latitude": 33.3766652,
+      "longitude": 126.5333312,
+      "latlng": "new kakao.maps.LatLng(33.270705, 126.572677)"
+    },
+    {
+      "house_id": "4",
+      "house_name": "J제주시 바닷가 앞 2층 감성숙소",
+      "house_images": [
+        "https://a0.muscache.com/im/pictures/783af174-a945-4461-bed8-1f9525bc60b8.jpg?aki_policy=xx_large",
+        "https://a0.muscache.com/im/pictures/2661b711-0ac6-4c94-ba2f-0d453b2d6ecd.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/a7f87f24-f382-418b-aaca-a4a8b14e2fc4.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/60b23cbe-96c0-4d7a-9bc8-78178251269d.jpg?im_w=1680",
+        "https://a0.muscache.com/im/pictures/3e04c422-fd12-4c38-a91b-2db1d860b6cb.jpg?im_w=1680"
+      ],
+      "house_address": "Samyangsam-dong,Cheju",
+      "house_type": "전원주택 전체",
+      "house_capacity": 4,
+      "house_num_of_bedroom": 2,
+      "house_num_of_bed": 1,
+      "house_num_of_bathroom": 1,
+      "house_rating": 4.79,
+      "house_superhost": true,
+      "latitude": 33.3696652,
+      "longitude": 126.5839312,
+      "latlng": "(33.470705, 126.972677)"
+    },
+    {
+      "house_id": "5",
+      "house_name": "감성숙소",
+      "house_images": [
+        "https://a0.muscache.com/im/pictures/783af174-a945-4461-bed8-1f9525bc60b8.jpg?aki_policy=xx_large",
+        "https://a0.muscache.com/im/pictures/2661b711-0ac6-4c94-ba2f-0d453b2d6ecd.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/a7f87f24-f382-418b-aaca-a4a8b14e2fc4.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/60b23cbe-96c0-4d7a-9bc8-78178251269d.jpg?im_w=1680",
+        "https://a0.muscache.com/im/pictures/3e04c422-fd12-4c38-a91b-2db1d860b6cb.jpg?im_w=1680"
+      ],
+      "house_address": "Samyangsam-dong,Cheju",
+      "house_type": "전원주택 전체",
+      "house_capacity": 4,
+      "house_num_of_bedroom": 2,
+      "house_num_of_bed": 1,
+      "house_num_of_bathroom": 1,
+      "house_rating": 4.79,
+      "house_superhost": true,
+      "latitude": 33.4766652,
+      "longitude": 126.5333312,
+      "latlng": "new kakao.maps.LatLng(33.52972, 126.52194)"
+    }
+  ]
+}
+
+

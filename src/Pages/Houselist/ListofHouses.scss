@@ -1,0 +1,132 @@
+.ListofHouses {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+
+  .house-imgs {
+    div {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      --organic-arrow-height: 19px;
+      --organic-arrow-color: white;
+      --control-bullet-color: #fafafa;
+      --control-bullet-active-color: #b0b0b0;
+      --loader-bar-color: transparent;
+      --loader-bar-height: 1px;
+    }
+
+    .awssld__bullets {
+      position: absolute;
+      bottom: 7px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      button {
+        width: 6px;
+        height: 6px;
+        margin: 4px;
+      }
+    }
+  }
+  .house-detail {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    .house-main-contents {
+      .house-header {
+        display: flex;
+        flex-direction: row;
+
+        .type-and-name {
+          p {
+            color: rgb(113, 113, 113);
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 300px;
+          }
+
+          h1 {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(99, 55, 55);
+            padding-bottom: 10px;
+            line-height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 350px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 14px;
+        line-height: 18px;
+        color: rgb(113, 113, 113);
+        margin-top: 4px;
+        // font-weight: 400;
+      }
+    }
+
+    .house-rating-with-star {
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
+        flex-direction: row;
+
+        span {
+          color: #717171;
+          padding-right: 5px;
+        }
+        h3 {
+          color: #222222;
+          font-size: 12px;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      .price {
+        span {
+          color: black;
+        }
+        color: black;
+        font-size: 18px;
+        font-weight: 800;
+        .price-per-night {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .heart-icon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heart-icon:hover {
+    background-color: #f4f4f4;
+    border-radius: 50%;
+  }
+}

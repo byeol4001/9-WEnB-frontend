@@ -1,0 +1,299 @@
+.Houselist {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  border-bottom: 2px solid #efefef;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 433.67px;
+
+  .main-wo-footer {
+    display: flex;
+
+    .main-left {
+      width: 50%;
+      position: relative;
+      height: calc(100vh - 150px);
+      padding: 0 24px;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      margin-top: 50px;
+      .main-left-header {
+        color: #222222;
+        p {
+          font-size: 14px;
+          line-height: 18px;
+          padding-bottom: 6px;
+        }
+
+        h1 {
+          font-size: 32px;
+          font-weight: 800;
+          line-height: 36px;
+        }
+        .filter-buttons {
+          padding-top: 20px;
+          display: flex;
+          button {
+            height: 40px;
+            border: 1px solid rgb(176, 176, 176);
+            border-radius: 30px;
+            padding: 8px 16px;
+            margin: 4px 8px 4px 0;
+            background-color: white;
+            cursor: pointer;
+
+            &:hover {
+              border: 1px solid black;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+          .show-houselist {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 129px;
+            left: 155px;
+            width: 350px;
+            z-index: 100;
+            background-color: white;
+            border-radius: 10px;
+            border: 0.7px solid rgb(176, 176, 176);
+
+            .type-wrapper {
+              padding: 20px;
+
+              .house-type {
+                display: flex;
+                padding: 0 auto;
+                margin-bottom: 15px;
+                span {
+                  .checkbox-label {
+                    display: block;
+                    position: relative;
+                    margin: auto;
+                    font-size: 22px;
+                    line-height: 24px;
+                    height: 24px;
+                    width: 24px;
+                    clear: both;
+                    cursor: pointer;
+
+                    &.checked {
+                      background-color: black;
+                      // background: url('https://img.icons8.com/material-outlined/50/000000/checkmark.png') no-repeat;
+                      height: 24px;
+                      width: 24px;
+                    }
+
+                    input {
+                      position: absolute;
+                      opacity: 0;
+                      cursor: pointer;
+                      all: unset;
+                    }
+
+                    .checkbox-custom {
+                      position: absolute;
+                      top: 0px;
+                      left: 0px;
+                      height: 24px;
+                      width: 24px;
+                      background-color: transparent;
+                      border-radius: 5px;
+                      transition: all 0.3s ease-out;
+                      -webkit-transition: all 0.3s ease-out;
+                      -moz-transition: all 0.3s ease-out;
+                      -ms-transition: all 0.3s ease-out;
+                      -o-transition: all 0.3s ease-out;
+                      border: 1px solid rgb(176, 176, 176);
+
+                      &::after {
+                        position: absolute;
+                        content: '';
+                        left: 12px;
+                        top: 12px;
+                        height: 0px;
+                        width: 0px;
+                        border-radius: 5px;
+                        // border: solid #009bff;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(0deg) scale(0);
+                        -ms-transform: rotate(0deg) scale(0);
+                        transform: rotate(0deg) scale(0);
+                        opacity: 1;
+                        transition: all 0.3s ease-out;
+                      }
+                    }
+                  }
+                }
+
+                span {
+                  padding-left: 10px;
+                  div {
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                    font-weight: 600;
+                  }
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            .save {
+              margin-left: 240px;
+              margin-bottom: 20px;
+              width: 70px;
+              background-color: black;
+              color: white;
+              font-size: 14px;
+              border-radius: 10px;
+            }
+          }
+
+          .show-price {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            // height: 500px;
+            z-index: 100;
+            background-color: white;
+            border-radius: 10px;
+            border: 0.7px solid rgb(176, 176, 176);
+            top: 128px;
+            left: 252px;
+            .price {
+              padding: 30px 15px;
+              .house-type {
+                margin-bottom: 20px;
+              }
+              section {
+                display: flex;
+                .dash {
+                  padding-top: 13px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                }
+                .price-wrapper {
+                  border: 0.7px solid rgb(176, 176, 176);
+                  border-radius: 10px;
+                  width: 158px;
+                  // height: 56px;
+                  padding: 5px 15px;
+
+                  .price-range {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    color: rgb(176, 176, 176);
+                  }
+                  .price-input-wrapper {
+                    display: flex;
+                    span {
+                      input {
+                        width: 100px;
+                        height: 16px;
+                        border: none;
+                        outline: none;
+                      }
+                    }
+                  }
+                }
+              }
+              .save {
+                font-size: 14px;
+                width: 80px;
+                border-radius: 10px;
+                background-color: black;
+                color: white;
+                margin-top: 20px;
+                margin-left: 248px;
+                padding: 0 5px !important;
+              }
+            }
+          }
+
+          .hide {
+            display: none;
+          }
+        }
+
+        h2 {
+          color: #717171;
+          font-size: 14px;
+          line-height: 20px;
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+      }
+
+      .buttons {
+        text-align: center;
+        margin: 30px auto;
+        button {
+          border: none;
+          background-color: transparent;
+          margin-left: 10px;
+          // padding-left: 10px;
+          cursor: pointer;
+
+          &:hover {
+            color: white;
+            background-color: black;
+            border-radius: 50%;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .house-recommanded {
+        padding: 80px 24px 0 24px;
+        background-color: #f7f7f7;
+        color: #222222;
+        margin: 0px !important;
+        width: 50vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        // width: 100vh;
+        h1 {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 26px;
+        }
+
+        h2 {
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 4px;
+        }
+        h3 {
+          font-size: 14px;
+        }
+      }
+    }
+    .main-left::-webkit-scrollbar {
+      display: none;
+    }
+    .map-right {
+      width: 50%;
+      height: calc(100vh - 80px);
+      // height: 100vh;
+      // overflow: hidden;
+      // margin-top: 130px;
+    }
+  }
+  .footer {
+    height: 433.67px;
+    width: 1600px;
+    background-color: palegoldenrod;
+  }
+}
