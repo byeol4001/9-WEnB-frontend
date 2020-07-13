@@ -1,6 +1,7 @@
 /*global kakao*/
 import React from 'react';
 import './Map.scss';
+const {kakao} = window;
 
 class Map extends React.Component {
   componentDidMount = () => {

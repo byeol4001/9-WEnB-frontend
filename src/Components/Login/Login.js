@@ -1,6 +1,7 @@
 import React from 'react';
 import GoogleLogin from '../../Images/google_login.png';
 import KaKaoLogin from 'react-kakao-login';
+import {API_URL_LOGIN} from '../../config';
 import styled from 'styled-components';
 import './Login.scss';
 
@@ -13,34 +14,34 @@ class Login extends React.Component {
     };
   }
 
-
   responseKaKao = (res) => {
+    const { data } = this.state;
+
     this.setState({
       data: res,
     });
-    fetch('http://10.58.7.55:8000/user/signin/kakao', {
+    fetch(`http://${API_URL_LOGIN}/user/signin/kakao`, {
       method: 'GET',
       headers: {
-        Authorization: this.state.data.response.access_token,
+        Authorization: data.response.access_token,
       },
     })
       .then((res) => res.json())
+      .then((res) => console.log(res));
   };
 
   responseFail = (err) => {
     alert(err);
   };
 
-  closeHandler = () => {
-    this.setState({ close: true });
-  };
-
   render() {
+    const { close } = this.state;
+
     return (
-      <div className={this.state.close ? 'hide' : 'Login'}>
+      <div className={close ? 'hide' : 'Login'}>
         <div className='login-modal'>
           <div className='login-content'>
-            <button onClick={this.closeHandler} className='close-modal'>
+            <button onClick={() => this.setState({ close: true })} className='close-modal'>
               X
             </button>
             <div className='login-btns'>
