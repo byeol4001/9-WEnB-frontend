@@ -1,0 +1,410 @@
+:focus {
+  outline: none;
+}
+.search-box {
+  background-color: #fff;
+  padding-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+  max-width: 1600px;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  display: grid;
+  .nobutton {
+    background-color: white;
+    border: transparent;
+    cursor: pointer;
+    padding-right: 4%;
+    font-size: 16px;
+    color: #222222;
+    font-weight: normal;
+    .go-online {
+      border: none;
+    }
+  }
+  .category-box {
+    border-bottom: 1.8px solid #fff;
+  }
+  .category-box:hover {
+    margin-top: 2%;
+    height: 35%;
+    cursor: pointer;
+    border-bottom: 1.8px solid #222;
+    transition: all 1.1s ease;
+  }
+
+  .categories {
+    padding-top: 50px;
+
+    width: 500px;
+    height: 50px;
+    .nobutton {
+      background-color: white;
+      border: transparent;
+      cursor: pointer;
+      padding-right: 4%;
+      font-size: 16px;
+      color: #222222;
+      font-weight: normal;
+    }
+    .go-online {
+      font-size: 16px;
+      color: #222222;
+      font-weight: normal;
+    }
+  }
+  :focus {
+    outline: none;
+  }
+}
+
+.fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  background-color: white;
+
+  .sukso-tag {
+    display: inline-block;
+    margin-right: 24px;
+    position: relative;
+
+    .sukso {
+      font-size: 16px;
+      line-height: 20px;
+      color: #222222;
+      cursor: pointer;
+      padding: 2px 2px 2px 2px;
+    }
+    .go-online {
+    }
+  }
+}
+
+.schedule-search {
+  background-color: #fff;
+  border: 1px solid #b0b0b0;
+  border-radius: 12px;
+  color: #222222;
+  display: flex;
+  width: 74vw;
+  margin-top: 45px;
+  justify-content: center;
+  height: 55px;
+  padding: 0 55px;
+
+  .schedule-input-box {
+    flex: 0 auto;
+    border-right: 1px solid #dddddd;
+    padding-right: 43px;
+  }
+  .place-box {
+    padding: 6px 2px;
+    z-index: 2;
+    position: relative;
+    padding-right: 105px;
+    font-size: 11px;
+    cursor: pointer;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    .place {
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 800;
+      padding-bottom: 6px;
+    }
+    .place-input {
+      font-size: 12px;
+      line-height: 18px;
+      color: #717171;
+      font-weight: 500;
+      overflow: hidden;
+      border: none;
+      width: 260px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.checkin {
+  /*margin: 0 -1px;
+    position: relative;
+    border-right: 1px solid #dddddd;
+    padding-right: 80px;*/
+  flex: 0 1 auto;
+  border-right: 1px solid #dddddd;
+  padding-right: 43px;
+  .DateRangePickerInput__withBorder {
+    border-radius: 2px;
+    border: 1px solid #fff;
+  }
+  .checkin-button {
+    background-color: transparent;
+    border: 0px;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+    padding-right: 90px;
+    .checkin-box {
+      padding: 6px 2px;
+      z-index: 2;
+      position: relative;
+      .add-date {
+        font-size: 12px;
+        line-height: 18px;
+        color: #717171;
+        font-weight: 400;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.capacity {
+  margin: 0 -1px;
+  position: relative;
+  .check-capacity {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 800;
+    padding-bottom: 6px;
+    letter-spacing: 1px;
+    padding-top: 7px;
+    padding-left: 15px;
+  }
+
+  .capacity-button {
+    background-color: transparent;
+    border: 0px;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+    //padding-right: 165px;
+    //margin-left: 50px;
+    :focus {
+      outline: none;
+    }
+    .capacity-box {
+      padding: 0px 9px;
+      z-index: 2;
+      position: relative;
+      width: 262px;
+      padding-left: 10px;
+
+      .add-guest {
+        font-size: 12px;
+        line-height: 18px;
+        color: #717171;
+        font-weight: 400;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.gumsaek {
+  height: 100%;
+  padding: 10px;
+  cursor: pointer;
+  .gumsaek-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    width: auto;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      Helvetica Neue, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border-style: solid;
+    outline: none;
+    padding: 14px 24px;
+    background: linear-gradient(
+      to right,
+      #e61e4d 0%,
+      #e31c5f 50%,
+      #d70466 100%
+    );
+    color: #ffffff;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 43px;
+    margin-top: -5px;
+    border: none;
+    cursor: pointer;
+    //margin-left: 74px;
+  }
+  .icon {
+    padding-bottom: -20px;
+    svg {
+      margin-left: -5px;
+      margin-right: 2px;
+      margin-bottom: -2px;
+    }
+  }
+  .gumsaek-letter {
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+.DateRangePickerInput__withBorder {
+  border-radius: 2px;
+  border: none;
+}
+
+.DateRangePicker {
+  position: relative;
+  display: inline-block;
+  width: 365px;
+  margin-top: 25px;
+  .DateInput_input {
+    font-weight: 200;
+    font-size: 19px;
+    line-height: 1px;
+
+    width: 100%;
+    height: 10px;
+  }
+}
+.check-in-and-out {
+  width: 100px;
+  height: 10px;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 800;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  padding-left: 11px;
+}
+
+.DateRangePickerInput__withBorder {
+  border-radius: 2px;
+  border: none;
+}
+
+.DateRangePicker {
+  font-size: 10px;
+  position: relative;
+  display: inline-block;
+  width: 365px;
+  margin-top: 13px;
+}
+
+.DateRangePicker .DateInput_input {
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 1px;
+
+  width: 100%;
+  height: 10px;
+}
+.DateRangePickerInput__withBorder {
+  border-radius: 2px;
+  border: 1px solid #fff;
+}
+
+.DateRangePickerInput__showClearDates {
+  padding-right: 30px;
+  //border: #fff;
+}
+
+/*인원추가박스*/
+.the-number-add {
+  border-radius: 10px;
+  padding: 8px;
+  width: 100%;
+  font-size: 12px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+  .the-number-add-each-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 4px 16px 0; //따닥따닥 붙어있는거 띄우기
+    margin-bottom: 1em;
+  }
+  .the-number-add-each-box div:first-child p:nth-child(1) {
+    color: #484848;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  .the-number-add-each-box div:first-child p:nth-child(2) {
+    color: #767676;
+    font-size: 13.5px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  .thenumber-btn {
+    color: rgb(161, 160, 160);
+    border-color: rgb(235, 235, 235);
+    width: 30px;
+    height: 30px;
+    border: solid 1.1px rgb(161, 160, 160);
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0em;
+    text-rendering: auto;
+    font: 400 13.3333px Arial;
+
+    :focus {
+      outline: none;
+    }
+  }
+  .thenumber-btn-color-light {
+    color: rgb(235, 235, 235);
+    border-color: rgb(235, 235, 235);
+    width: 30px;
+    height: 30px;
+    border: solid 1.1px rgb(235, 235, 235);
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0em;
+    text-rendering: auto;
+    font: 400 13.3333px Arial;
+  }
+  .adding-box {
+    display: flex;
+    align-items: center;
+    div {
+      padding: 0 9px;
+    }
+  }
+
+  .adult {
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    padding: 3px;
+    border: none;
+    background: none;
+  }
+}
+
+.DateRangePicker .DateInput_input {
+  font-size: 12px;
+  line-height: 1px;
+  width: 100%;
+  height: 10px;
+  color: #717171;
+  font-weight: 500;
+}
+
+.DateRangePickerInput__withBorder {
+  border-radius: 2px;
+  border: 1px solid #fff;
+}

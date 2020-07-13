@@ -4,6 +4,9 @@ import Map from './Map/Map';
 import ListofHouses from './ListofHouses';
 import ImageSlide from './ImageSlide/ImageSlide';
 import './Houselist.scss';
+import Footer from "../../Components/Footer/Footer";
+import "../../Components/Footer/Footer.scss";
+import Header from"../../Components/Header/Header";
 
 const Houselist = (props) => {
   const [data1, setData1] = useState([]);
@@ -85,6 +88,8 @@ const Houselist = (props) => {
   const avePrice = parseInt(totalPrice / data1.length).toLocaleString();
 
   return (
+    <>
+    <Header />
     <div className='Houselist'>
       <div className='main-wo-footer'>
         <main className='main-left'>
@@ -238,8 +243,11 @@ const Houselist = (props) => {
           <Map data={data1} hoveredMarker={hoveredMarker} />
         </div>
       </div>
-      <div className='footer'>ff</div>
+ 
+   
     </div>
+    <Footer />
+    </>
   );
 };
 

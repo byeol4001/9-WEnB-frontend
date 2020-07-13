@@ -1,0 +1,118 @@
+.footer {
+  width: 100%;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica;
+}
+
+.footer-container {
+  padding: 32px 0;
+}
+
+.introduction-box {
+  padding-left: 23vh;
+  padding-right: 12px;
+  display: inline-table;
+  justify-content: space-between;
+  .introduction {
+    color: #222222;
+    font-size: 12px;
+    margin-bottom: 0px;
+    font-weight: 700;
+  }
+  .introduction-ul {
+    display: block;
+
+    .introduction-li {
+      margin-top: 16px;
+      .introduction-a {
+        color: #484848;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.under-footer {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+
+  //-webkit-font-smoothing: antialiased;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #dddddd;
+  .under-footer-whole {
+    text-align: left;
+    justify-content: space-between;
+  }
+  .under-footer-right {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    color: #222222;
+
+    .language-currency-wrapper {
+      justify-content: right;
+      a {
+        font-size: 13px;
+        color: #222222;
+      }
+    }
+  }
+  .krw-a {
+    font-size: 13px;
+    color: #222222;
+  }
+
+  .airbnbinc {
+    margin-right: 19px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #222222;
+    display: inline-block;
+  }
+}
+
+.introduction-a {
+  color: #222222;
+}
+
+.left-wrapper {
+  display: flex;
+  padding-left: 50px;
+  .airbnbinc {
+    font-size: 12px;
+  }
+
+  .policy {
+    display: inline-block;
+    font-size: 13px;
+    color: #222222;
+    a {
+      font-size: 13px;
+      color: #222222;
+    }
+  }
+  .social-media {
+    display: flex;
+    padding-left: 50px;
+  }
+  .social-media-ul {
+    display: flex;
+  }
+  .social-media-a {
+    padding-right: 10px;
+  }
+}
+
+.under-footer-right {
+  margin-bottom: 0px;
+  padding-left: 480px;
+}
+
+.krw-a {
+  padding-left: 30px;
+}

@@ -1,0 +1,547 @@
+:focus {
+  outline: none;
+}
+.main {
+  -webkit-locale: "ko";
+  direction: ltr;
+  unicode-bidi: isolate;
+  position: relative;
+
+  .margin-controller {
+    //margin-left: 160px;
+  }
+
+  .letter-box {
+    position: relative;
+    font-size: 32px;
+    line-height: 36px;
+    -webkit-text-fill-color: transparent;
+    max-width: 100%;
+    margin: 13vh 13vw 5vh;
+  }
+
+  .three-options-box {
+    display: flex;
+    justify-content: space-around;
+    content: "";
+    position: relative;
+    z-index: 0;
+    max-width: 100%;
+    height: 500px;
+  }
+  .three-options-box::before,
+  .three-options-box::after {
+    display: flex;
+    content: "";
+  }
+
+  .three-options-box-container {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    height: 350px;
+    .three-options {
+      display: flex;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      min-width: 100%;
+      scroll-snap-type: x mandatory;
+      list-style: none;
+    }
+  }
+
+  .each-box {
+    border-width: 0px 5px;
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0px 5px;
+    max-width: 33.33333%;
+    flex: 33.333333%;
+  }
+
+  .product-img {
+    width: 420px;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .three-options-wrapper {
+    display: flex;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    min-width: 100%;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+    padding-bottom: 2px;
+    margin-left: -5px;
+    margin-right: -5px;
+    box-shadow: 0px 0px 20px #000;
+  }
+
+  .three-options-wrapper-li {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0px 5px;
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
+  }
+
+  .three-options-wrapper-a {
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    display: block;
+    text-align: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    outline: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+      -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: transparent;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+  }
+
+  .each-description {
+    width: 272px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 16px;
+  }
+
+  .boxbox {
+    width: 420px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 16px;
+    margin-left: 10px;
+  }
+
+  .boxbox2 {
+    width: 420px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 16px;
+    margin-left: 5px;
+  }
+
+  .boxbox3 {
+    width: 420px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .innerbox-controll {
+    position: relative;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: rgb(72, 72, 72);
+    overflow: hidden;
+  }
+
+  .innerbox-controll-inner {
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    padding-top: 62.6667%;
+  }
+
+  .innerbox-controll-inner2 {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .online-experience-description-box {
+    padding-left: 16px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    height: 50px;
+  }
+  .online-experience {
+    font-size: 18px;
+    line-height: 22px;
+    max-height: 44px;
+    text-overflow: ellipsis;
+    display: block;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    white-space: pre-line;
+    overflow: hidden;
+  }
+
+  .online-experience-des {
+    font-size: 14px;
+    line-height: 18px;
+    max-height: 54px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: rgb(113, 113, 113);
+    font-weight: 400;
+    margin-top: 4px;
+    white-space: pre-line;
+    overflow: hidden;
+  }
+
+  /*검정 박스*/
+  .black-container {
+    margin-top: 54px;
+    padding-top: 50px;
+    background-color: rgb(0, 0, 0);
+    height: 1300px;
+  }
+
+  .black-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
+    max-width: 100%;
+  }
+
+  .letter-box-online {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .bigone {
+    color: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px 79px;
+    width: 100vh;
+  }
+
+  .big-letter {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    width: 100vw;
+  }
+
+  .small-letter {
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    margin-top: 4px;
+    width: 100vw;
+  }
+
+  .modu-dullebogi {
+    text-align: right;
+    flex: 0 0 auto;
+    margin-top: -96px;
+    padding: 0px 79px;
+
+    //color: #484848;
+    //line-height: 1.43;
+    //margin-left: 100vh;
+    //width: 115px;
+  }
+
+  .modu-dullebogi-button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: auto;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    text-decoration: none;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+      -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+
+    border: 1.2px solid rgb(255, 255, 255); //테두리 흰색을 유지시켜줌
+    background: transparent;
+  }
+
+  /*사진들*/
+  .picture-box {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    margin-top: 150px;
+    padding: 10px 80px;
+  }
+
+  .picture-grid {
+    grid-template-columns: 100% 100% 100% 100%;
+  }
+
+  .picture-grid2 {
+    grid-area: 1 / 1 / auto / auto;
+  }
+
+  .bigpic-img {
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-align: inherit;
+    height: 73%;
+    border-radius: 16px 16px 0px 0px;
+  }
+  .bigpic-letterbox {
+    background-color: rgb(0, 0, 0);
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+  }
+
+  .big-pic-box {
+    width: 55%;
+    //height: 100%;
+    height: 127vh;
+    //box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 16px;
+    // padding-top: 150px;
+    margin-right: 8px;
+  }
+
+  .bigpic-des {
+    font-size: 20px;
+    line-height: 27px;
+    max-height: 54px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: white;
+    font-weight: 400;
+    white-space: pre-line;
+    overflow: hidden;
+    margin-top: 24px;
+  }
+
+  .bigpic-des-middle {
+    font-size: 13px;
+    line-height: 15px;
+    max-height: 54px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: white;
+    font-weight: 400;
+    white-space: pre-line;
+    overflow: hidden;
+    margin-top: 17px;
+  }
+
+  .cook-description-box {
+    padding-left: 16px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 48px;
+    //height: 50px;
+    background-color: #222222;
+    border-radius: 0px 0px 16px 16px;
+  }
+
+  .bigpic-img {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  /*작은사이즈 사진 2개*/
+  .right-box {
+    width: 45%;
+
+    .right-small-box {
+      display: flex;
+      //flex-direction: column;
+      height: 200px;
+    }
+
+    .small-pic-box {
+      //grid-area: 1/2 / auto/auto;
+      border-radius: 16px;
+      //grid-column: 2 / auto ;
+      //grid-row: 1 / auto ;
+      display: flex;
+      padding-right: 7px;
+      height: 346px;
+
+      .smallpic-link {
+        cursor: pointer;
+        position: relative;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        color: inherit;
+        display: block;
+        text-align: inherit;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        outline: none;
+        transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+          -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+        background: transparent;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+      }
+
+      .small-pic-wrapper {
+        //display: inline-block;
+        vertical-align: bottom;
+        height: 100%;
+        width: 100%;
+        border-radius: 16px;
+        .small-pic-img {
+          width: 100%;
+          height: 100%;
+          border-radius: 16px 16px 0 0;
+        }
+      }
+    }
+
+    .cook-description-box-small {
+      font-size: 13px;
+      line-height: 20px;
+      //font-weight: 600;
+      min-height: 76px;
+      background-color: rgb(34, 34, 34);
+      color: rgb(255, 255, 255);
+      border-radius: 0px 0px 16px 16px;
+      padding: 16px;
+      margin-top: -30px;
+      height: 10px;
+      .smallpic-des {
+        width: 100%;
+        display: block;
+        margin-top: 17px;
+      }
+    }
+
+    .middle-pic-box {
+      flex-direction: column;
+      margin-top: 200px;
+
+      .middlepic-wrapper {
+        //display: inline-block;
+        vertical-align: bottom;
+        margin-top: 27px;
+
+        .middlepic-img {
+          border-radius: 16px 16px 0 0;
+          width: 99%;
+        }
+      }
+    }
+  }
+  .cook-description-box-middle {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    min-height: 76px;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    border-radius: 0px 0px 16px 16px;
+    padding: 16px;
+    margin-top: -30px;
+    width: 689px;
+  }
+
+  .letter-span {
+    font-size: 39px;
+    background: linear-gradient(
+      to right,
+      rgb(146, 23, 77) 10%,
+      rgb(228, 29, 92) 20%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 58px;
+    margin-bottom: 60px;
+    width: 58vw;
+  }
+}

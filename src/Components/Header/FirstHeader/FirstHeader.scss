@@ -1,0 +1,150 @@
+.Nav {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 0.2 ease-in-out;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  height: 54px;
+  //border-bottom: 1px solid #dfdcdc;
+  //box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px;
+  justify-content: center;
+  z-index: 1000;
+
+  header {
+    position: fixed;
+    z-index: 1000;
+    transition: 0.2 ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+    //border-bottom: #8e8e8e;
+    justify-content: center;
+    z-index: 1000;
+
+
+    .header-wrapper-main {
+      display: flex;
+      position: relative;
+      padding-top: 14px;
+      height: 55px;
+      padding: 0 55px;
+      padding-top: 14px;
+      height: 55px;
+      justify-content: space-between;
+      width: 90%;
+      min-width: 800px;
+      .logo-wrapper .header-wrapper-logo {
+        --header-brand-color: #ff385c;
+        background: #ffffff;
+        height: 80px;
+        left: 0px;
+        -webkit-transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1);
+        -moz-transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1);
+        transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1);
+        width: 100%;
+        z-index: 100;
+        position: absolute;
+        display: flex;
+      }
+
+      a {
+        display: inline-block;
+        padding-bottom: -20px;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }
+    }
+
+    .logo {
+      margin-top: -5px;
+      width: 103px;
+
+      svg {
+        width: 222%;
+        height: 77%;
+        color: #ff385c;
+      }
+    }
+
+    .desktopMenuList {
+      display: inline-flex;
+      position: relative;
+      margin-left: 6px;
+      justify-content: flex-end;
+      -webkit-box-pack: end;
+      padding-right: 10px;
+      margin-top: -8px;
+
+      li a {
+        display: inline-block;
+        color: #222222;
+      }
+      ._each {
+        color: #222222;
+        margin-top: 8px;
+        .each-menu {
+          font-size: 13px;
+          font-weight: 500;
+          width: 125px;
+        }
+        .each-menu-narrow {
+          font-size: 13px;
+          font-weight: 500;
+          padding-right: 39px;
+        }
+        .each-menu_add {
+          width: 80px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .jigu {
+      width: 10px;
+
+      button .jigu-button {
+        width: 10px;
+      }
+    }
+    .login {
+      .a-login {
+        -webkit-box-align: center;
+        background: transparent;
+        border: 1px solid #dfdcdc;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 18px;
+        overflow: visible;
+        padding: 0 19px;
+        align-items: center;
+        border-radius: 21px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+        position: relative;
+        background-color: #ffffff;
+        color: #222222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .login-letter {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
