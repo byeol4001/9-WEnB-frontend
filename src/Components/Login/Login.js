@@ -2,7 +2,6 @@ import React from 'react';
 import GoogleLogin from '../../Images/google_login.png';
 import KaKaoLogin from 'react-kakao-login';
 import styled from 'styled-components';
-
 import './Login.scss';
 
 class Login extends React.Component {
