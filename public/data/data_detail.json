@@ -1,0 +1,180 @@
+{
+  "data": [
+    {
+      "id": 11,
+      "house_name": "<귤밭작은집> 협재리 귤밭 속 조그만 제주 돌집",
+      "house_address": "Hallim-eub, Jeju-si, 제주도, 한국",
+      "description_title": "Heecheol님이 호스팅하는 전원주택 전체",
+      "house_superhost": true,
+      "host_name": "찰스",
+      "host_created_at": "2020-07-10T05:41:15.808Z",
+      "host_description": "이웃집 찰스. 저의 이웃이 되어보세용!",
+      "house_rating": 5,
+      "house_images": [
+        "https://a0.muscache.com/im/pictures/6d851bca-de95-49ba-9ebb-5b57d809194a.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/9121f4f6-78e5-4b88-95ca-ec23dfc5c964.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/a3946692-60c0-4afe-b7de-78c7aa9a7afe.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/d0d960cd-a366-4cba-8645-0b3bda3661fa.jpg?aki_policy=large",
+        "https://a0.muscache.com/im/pictures/734349a1-cccf-4f52-8f42-3c48198740d4.jpg?aki_policy=large"
+      ],
+      "description_explanation": [
+        "집 전체",
+        "셀프 체크인",
+        "깨끗하고 깔끔한 숙소",
+        "8월 27일일 까지 무료 취소 가능"
+      ],
+      "description_explanation_detail": [
+        "전원주택 전체를 단독으로 사용하시게 됩니다.",
+        "키패드를 이용해 체크인하세요.",
+        "최근 게스트 11명이 이 숙소가 티 없이 깨끗하다고 후기를 남겼습니다.",
+        "그 이후 9월 5일 4:00 PM 전에 예약을 취소하면 서비스 수수료를 제외한 요금 전액이 환불됩니다."
+      ],
+      "price": 60000,
+      "house_capacity": 2,
+      "house_num_of_bedroom": 1,
+      "house_num_of_bed": 1,
+      "house_num_of_bathroom": 1,
+      "longitude": "126.261730",
+      "latitude": "33.377890",
+      "description_explanation_bedtype": [
+        {
+          "type": "1번 침실",
+          "queen": 1
+        },
+        {
+          "type": "1번 침실",
+          "blanket": 1
+        }
+      ],
+      "more_stays": [
+        {
+          "id": 10,
+          "house_name": "#203 : 야외욕조와 라탄인테리어 (선스토리)",
+          "house_address": "Pyoseon-myeon, Seogwipo-si, 제주도, 한국",
+          "description_title": "선희님이 호스팅하는 펜션(한국)의 개인실",
+          "house_superhost": true,
+          "host_name": "HR BAN",
+          "host_created_at": "2020-07-10T05:41:15.806Z",
+          "host_description": "안녕하세요. 저는 HR입니다. 저희 집에서 즐거운 시간 보내세요!~~",
+          "house_rating": 5,
+          "house_images": [
+            "https://a0.muscache.com/im/pictures/0fd992b6-03ab-479c-b73e-9181c6121c0a.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/866c7154-4a5d-4d2a-ad10-1e79a7ac256c.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/b5880488-69ea-453d-a0b4-9b14123bbf34.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/6e9d6e06-0b03-4edf-bf82-5ee18b97da01.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/6c55b1bf-5622-42d7-a068-fbef4c67784f.jpg?aki_policy=large"
+          ],
+          "description_explanation": [
+            "선희님은 슈퍼호스트입니다",
+            "순조로운 체크인 과정",
+            "8월 27일일 까지 무료 취소 가능"
+          ],
+          "description_explanation_detail": [
+            "슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.",
+            "최근 숙박한 게스트 중 95%가 체크인 과정에 별점 5점을 준 숙소입니다.",
+            "그 이후 9월 5일 4:00 PM 전에 예약을 취소하면 서비스 수수료를 제외한 요금 전액이 환불됩니다."
+          ],
+          "price": 80000,
+          "house_capacity": 2,
+          "house_num_of_bedroom": 1,
+          "house_num_of_bed": 1,
+          "house_num_of_bathroom": 1,
+          "longitude": "126.836180",
+          "latitude": "33.320540",
+          "description_explanation_bedtype": [
+            {
+              "type": "1번 침실",
+              "queen": 1
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "house_name": "&매듭 203호",
+          "house_address": "Yongdamsam-dong, Cheju, 제주도, 한국",
+          "description_title": "Joonho님이 호스팅하는 펜션",
+          "house_superhost": false,
+          "host_name": "HR BAN",
+          "host_created_at": "2020-07-10T05:41:15.806Z",
+          "host_description": "안녕하세요. 저는 HR입니다. 저희 집에서 즐거운 시간 보내세요!~~",
+          "house_rating": 5,
+          "house_images": [
+            "https://a0.muscache.com/im/pictures/a11dfac2-3ad2-46c8-9fd9-78a0e7a2723d.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/5c19bcc4-0fa9-4f76-9e48-cf7629924411.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/19157d50-3bf8-4d05-8416-bc0e594e40c6.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/67dff7b1-1389-4a49-895b-08d809e9a31c.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/7752687d-8d0f-43d7-855b-9cb04345da02.jpg?aki_policy=large"
+          ],
+          "description_explanation": [
+            "집 전체",
+            "깨끗하고 깔끔한 숙소",
+            "Joonho님은 슈퍼호스트입니다",
+            "환불 정책"
+          ],
+          "description_explanation_detail": [
+            "펜션(한국) 전체를 단독으로 사용하시게 됩니다.",
+            "최근 게스트 13명이 이 숙소가 티 없이 깨끗하다고 후기를 남겼습니다.",
+            "슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.",
+            "8월 11일 12:00 PM 전에 예약을 취소하면 요금 전액이 환불됩니다."
+          ],
+          "price": 80000,
+          "house_capacity": 2,
+          "house_num_of_bedroom": 1,
+          "house_num_of_bed": 1,
+          "house_num_of_bathroom": 1,
+          "longitude": "126.494360",
+          "latitude": "33.519660",
+          "description_explanation_bedtype": [
+            {
+              "type": "1번 침실",
+              "queen": 1
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "house_name": "&매듭 202호",
+          "house_address": "Yongdamsam-dong, Cheju, 제주도, 한국",
+          "description_title": "Joonho님이 호스팅하는 펜션",
+          "house_superhost": true,
+          "host_name": "HR BAN",
+          "host_created_at": "2020-07-10T05:41:15.806Z",
+          "host_description": "안녕하세요. 저는 HR입니다. 저희 집에서 즐거운 시간 보내세요!~~",
+          "house_rating": 5,
+          "house_images": [
+            "https://a0.muscache.com/im/pictures/62073b73-69f6-4a2a-a89d-1984bcb58070.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/3b4f30f6-b713-455d-a96f-a9d41f3f0a66.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/907b98e7-a6da-4f37-b33f-0bf31a940c4e.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/2b1c308c-9d44-4a12-86ef-3362f441d8cf.jpg?aki_policy=large",
+            "https://a0.muscache.com/im/pictures/7e46bb54-6b9d-4485-9030-844982071673.jpg?aki_policy=large"
+          ],
+          "description_explanation": [
+            "집 전체",
+            "깨끗하고 깔끔한 숙소",
+            "Joonho님은 슈퍼호스트입니다",
+            "환불 정책"
+          ],
+          "description_explanation_detail": [
+            "펜션(한국) 전체를 단독으로 사용하시게 됩니다.",
+            "최근 게스트 11명이 이 숙소가 티 없이 깨끗하다고 후기를 남겼습니다.",
+            "슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.",
+            "8월 11일 12:00 PM 전에 예약을 취소하면 요금 전액이 환불됩니다."
+          ],
+          "price": 80000,
+          "house_capacity": 2,
+          "house_num_of_bedroom": 1,
+          "house_num_of_bed": 1,
+          "house_num_of_bathroom": 1,
+          "longitude": "126.491310",
+          "latitude": "33.517960",
+          "description_explanation_bedtype": [
+            {
+              "type": "1번 침실",
+              "queen": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

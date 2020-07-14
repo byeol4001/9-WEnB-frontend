@@ -3,6 +3,7 @@ import SecondHeader from'./SecondHeader/SecondHeader';
 import FirstHeader from './FirstHeader/FirstHeader';
 //import LoginHeader from './LoginHeader/LoginHeader';
 
+
 class Header extends Component {
   state = {
     prevScrollpos: window.pageYOffset,
@@ -37,6 +38,7 @@ class Header extends Component {
       </div>
   
     );
+
   }
 }
 
