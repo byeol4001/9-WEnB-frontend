@@ -6,7 +6,7 @@
   border-bottom: 2px solid #efefef;
   flex-direction: column;
   overflow: hidden;
-  margin-bottom: 433.67px;
+  // margin-bottom: 433.67px;
 
   .main-wo-footer {
     display: flex;
@@ -18,7 +18,7 @@
       padding: 0 24px;
       overflow: scroll;
       -ms-overflow-style: none;
-      margin-top: 50px;
+      margin-top: 40px;
       .main-left-header {
         color: #222222;
         p {
@@ -114,7 +114,7 @@
 
                       &::after {
                         position: absolute;
-                        content: '';
+                        content: "";
                         left: 12px;
                         top: 12px;
                         height: 0px;
@@ -290,10 +290,5 @@
       // overflow: hidden;
       // margin-top: 130px;
     }
-  }
-  .footer {
-    height: 433.67px;
-    width: 1600px;
-    background-color: palegoldenrod;
   }
 }
