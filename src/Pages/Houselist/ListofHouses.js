@@ -17,7 +17,8 @@ function ListofHouses({ price, bedroom, name, images, address, type, capacity, b
   let history = useHistory();
 
   const heartClickHandler = () => {
-    history.push('/wishList');
+    history.push('/wishlist');
+    
   };
   const mouseOvered = () => {
     setHovered(true);

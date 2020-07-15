@@ -10,7 +10,6 @@ const WishList = () => {
           <span>저장 목록</span>
           <button>목록 만들기</button>
         </div>
-
         <WishListWrap>
           <WishItem />
         </WishListWrap>

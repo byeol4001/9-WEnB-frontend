@@ -23,7 +23,7 @@ class Routes extends React.Component {
           <Route exact path='/login' component={Login} />
           <Route exact path='/main' component={Main} />
           <Route exact path='/search' component={SearchBox} />
-          <Route exact path='/stay?address=:address&guests=:guest' component={Houselist} />
+          <Route exact path='/stay?location=:location&guests=:guest' component={Houselist} />
           <Route exact path='/detailpage/' component={DatailPage} />
           <Route exact path='/Reservation' component={Reservation} />
           <Route exact path='/footer' component={Footer} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleLogin from '../../Images/google_login.png';
 import KaKaoLogin from 'react-kakao-login';
-import {API_URL_LOGIN} from '../../config';
+import { API_URL_LOGIN } from '../../config';
 import styled from 'styled-components';
 import './Login.scss';
 
@@ -16,18 +16,20 @@ class Login extends React.Component {
 
   responseKaKao = (res) => {
     const { data } = this.state;
+    console.log(res);
 
     this.setState({
       data: res,
     });
-    fetch(`http://${API_URL_LOGIN}/user/signin/kakao`, {
+    fetch(`${API_URL_LOGIN}/user/signin/kakao`, {
       method: 'GET',
       headers: {
-        Authorization: data.response.access_token,
+        Authorization: res.response.access_token,
       },
     })
       .then((res) => res.json())
-      .then((res) => console.log(res));
+      .then((res) => localStorage.setItem('token', res.token));
+      // .then((res) => console.log(res));
   };
 
   responseFail = (err) => {

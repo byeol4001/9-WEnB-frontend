@@ -4,7 +4,6 @@ const WishItem = () => {
     return (
 <WishItem>
 
-
 </WishItem>
     )
 }
@@ -12,8 +11,3 @@ const WishItem = () => {
 export default WishItem
 
 
-
-const WishItem = styled.div`
-  display: flex;
-  flex: flex-wrap;
-`;
