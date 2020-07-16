@@ -222,7 +222,7 @@ const filteredLocation = countries.filter(country => {
         <div className='gumsaek'>
           <button
             className='gumsaek-btn'
-            onClick={() => history.push(`/stay?address=${whereto}&guests=${adults}`)} //goToList(whereto, adults)}
+            onClick={() => history.push(`/stay?location=${whereto}&guests=${adults}`)} //goToList(whereto, adults)}
           >
             <div className='btnbtn'>
               <span className='icon'>

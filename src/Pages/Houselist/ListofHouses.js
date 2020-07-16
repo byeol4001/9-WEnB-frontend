@@ -3,23 +3,30 @@ import { useHistory } from 'react-router-dom';
 import AwesomeSlider from 'react-awesome-slider';
 import { FaStar } from 'react-icons/fa';
 import { IoIosHeartEmpty } from 'react-icons/io';
+import { API_URL_HR } from '../.././config';
 import 'react-awesome-slider/dist/styles.css';
 import './ListofHouses.scss';
-import WishList from '../WishList/WishList';
 
-function ListofHouses({ price, bedroom, name, images, address, type, capacity, bathroom, bed, rating, superhost, lat, lon, onClick, onMouseOver }) {
-  // const [name, setName] = useState("")
-  // const [images, setImages] = useState("")
-  // const [address, setAddress] = useState("")
-
+function ListofHouses({ id, price, bedroom, name, images, address, type, capacity, bathroom, bed, rating, onClick, onMouseOver }) {
   const [hovered, setHovered] = useState(false);
-
   let history = useHistory();
 
   const heartClickHandler = () => {
     history.push('/wishlist');
-    
+
+    fetch(`${API_URL_HR}/user/wishlist`, {
+      method: 'POST',
+      headers: {
+        Authorization: localStorage.getItem('token'),
+      },
+      body: JSON.stringify({
+        stay_id: id,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
   };
+
   const mouseOvered = () => {
     setHovered(true);
   };

@@ -1,64 +1,74 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
+import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
 import Map from './Map/Map';
 import ListofHouses from './ListofHouses';
 import ImageSlide from './ImageSlide/ImageSlide';
-import Footer from '../../Components/Footer/Footer';
-import Header from '../../Components/Header/Header';
 import { API_URL_CH } from '../.././config';
 import './Houselist.scss';
 
 const Houselist = (props) => {
-  const [data1, setData1] = useState([]);
+  const [data, setData] = useState([]);
   const [hoveredMarker, setHoveredMarker] = useState(null);
   const [type, setType] = useState(false);
   const [isStayTypeChecked, setIsStayTypeChecked] = useState(false);
   const [price, setPrice] = useState(false);
-  // const [houseType, setHouseType] = useState('');
-
   const [page, setPage] = useState('');
   const [stayType, setStayType] = useState('');
   const [lowPrice, setLowPrice] = useState(0);
   const [highPrice, setHighPrice] = useState(0);
+  const [filters, setFilters] = useState({
+    page: '',
+    stayType: '',
+    price: '',
+  });
 
-  const [pageSubmitted, setPageSubmitted] = useState('');
-  const [stayTypeSubmitted, setStayTypeSubmitted] = useState('');
-  const [priceSubmitted, setPriceSubmitted] = useState('');
+  const prevLocFirst = props.location.search.split('&')[0];
+  const prevLocSecond = props.location.search.split('&')[1];
+  const prevLoc = `${prevLocFirst}&${prevLocSecond}`;
 
   const [qs, setQs] = useState('');
-
-  useEffect(() => {
-    console.log('qsqsqsqs: ', qs);
-  }, [qs]);
-
   const history = useHistory();
 
   useEffect(() => {
     getInitialData();
+    console.log('init prevLoc: ', prevLoc);
   }, []);
 
   const getInitialData = async () => {
-    console.log('getInitialData', props.location.search);
-    const response = await fetch(`${API_URL_CH}/stay${props.location.search}`);
-    // const response = await fetch('http://localhost:3000/data1/data1.json')
+    const response = await fetch(`${API_URL_CH}/stay${prevLoc}`);
     const json = await response.json();
-    setData1(json.stay_list);
+    setData(json.stay_list);
   };
 
-  // useEffect(() => {
-  //   getUpdatedData();
-  // }, [page, stayType, price]);
+  useEffect(() => {
+    let newQs = '';
+    const keys = Object.keys(filters);
+    const filteredKeys = keys.filter((key) => filters[key]);
+    filteredKeys.forEach((key) => (newQs += filters[key]));
+    setQs(newQs);
+    console.log('qs', newQs);
+  }, [filters]);
 
-  const getUpdatedData = async () => {
-    console.log(props.location.search);
-    const nextResponse = await fetch(`${API_URL_CH}/stay${props.location.search}${getQuery()}`);
-    const nextJson = await nextResponse.json();
-    setData1(nextJson.stay_list);
+  const applyFilter = (type, num) => {
+    let val;
+    if (type === 'page') val = `&page=${num}`;
+    else if (type === 'stayType') val = `&stayType=${stayType}`;
+    else if (type === 'price') val = `&price=${lowPrice}~${highPrice}`;
+    const updatedFilters = { ...filters, [type]: val };
+    setFilters(updatedFilters);
   };
 
-  const getQuery = () => {
-    return `&page=${page}&stay_type=${stayType}&price=${lowPrice}~${highPrice}`;
-  };
+  useEffect(() => {
+    console.log('QS', qs);
+    console.log('prev', prevLoc);
+    console.log('qssss', `${API_URL_CH}/stay${prevLoc}${qs}`);
+    history.push(`/stay${prevLoc}${qs}`);
+    fetch(`${API_URL_CH}/stay${prevLoc}${qs}`)
+      .then((res) => res.json())
+      .then((res) => setData(res.stay_list));
+  }, [qs]);
 
   const clickHandler = (id, hoverState) => {
     if (hoverState) return;
@@ -66,7 +76,7 @@ const Houselist = (props) => {
   };
 
   const pageHandler = async (num) => {
-    setPageSubmitted(`&page=${num}`);
+    applyFilter('page', num);
     setPage(num);
   };
 
@@ -74,13 +84,12 @@ const Houselist = (props) => {
     const target = e.target;
     const { type, checked } = target;
     const value = type === 'checkbox' ? checked : value;
-
     set(value);
     setStayType(val);
   };
 
   const typeSubmitHandler = async () => {
-    setStayTypeSubmitted(`&stayType=${stayType}`);
+    applyFilter('stayType');
     setStayType(stayType);
     setType(!type);
   };
@@ -96,12 +105,12 @@ const Houselist = (props) => {
   };
 
   const priceFilterHandler = async () => {
-    setPriceSubmitted(`price=${lowPrice}~${highPrice}`);
+    applyFilter('price');
     setPrice(!price);
   };
 
-  const totalPrice = data1.length > 0 && data1.reduce((a, b) => +a + +b.price, 0);
-  const avePrice = parseInt(totalPrice / data1.length).toLocaleString();
+  const totalPrice = data.length > 0 && data.reduce((a, b) => +a + +b.price, 0);
+  const avePrice = parseInt(totalPrice / data.length).toLocaleString();
 
   return (
     <>
@@ -237,7 +246,7 @@ const Houselist = (props) => {
               <h2>여행 날짜와 게스트 인원수를 입력하면 1박당 총 요금을 확인할 수 있습니다.</h2>
             </div>
             <div className='house-list-wrapper'>
-              {data1.map((item, idx) => {
+              {data.map((item, idx) => {
                 return (
                   <ListofHouses
                     onMouseOver={() => setHoveredMarker(item.house_id)}
@@ -270,11 +279,11 @@ const Houselist = (props) => {
             <div className='house-recommanded'>
               <h1>최근 조회</h1>
               <h2>현재 검색 결과와 일치하도록 날짜와 가격이 업데이트되었습니다.</h2>
-              <ImageSlide data={data1} />
+              <ImageSlide data={data} />
             </div>
           </main>
           <div className='map-right'>
-            <Map data={data1} hoveredMarker={hoveredMarker} />
+            <Map data={data} hoveredMarker={hoveredMarker} />
           </div>
         </div>
       </section>
@@ -283,4 +292,4 @@ const Houselist = (props) => {
   );
 };
 
-export default Houselist;
+export default withRouter(Houselist);

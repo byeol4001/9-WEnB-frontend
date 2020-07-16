@@ -16,11 +16,11 @@ class Login extends React.Component {
 
   responseKaKao = (res) => {
     const { data } = this.state;
-    console.log(res);
 
     this.setState({
       data: res,
     });
+
     fetch(`${API_URL_LOGIN}/user/signin/kakao`, {
       method: 'GET',
       headers: {
@@ -28,12 +28,7 @@ class Login extends React.Component {
       },
     })
       .then((res) => res.json())
-      .then((res) => localStorage.setItem('token', res.token));
-      // .then((res) => console.log(res));
-  };
-
-  responseFail = (err) => {
-    alert(err);
+      .then((res) => localStorage.setItem('token', res.token), alert('로그인 성공하였습니다'));
   };
 
   render() {
@@ -43,7 +38,7 @@ class Login extends React.Component {
       <div className={close ? 'hide' : 'Login'}>
         <div className='login-modal'>
           <div className='login-content'>
-            <button onClick={() => this.setState({ close: true })} className='close-modal'>
+            <button onClose={this.props.onClose} onClick={() => this.setState({ close: true })} className='close-modal'>
               X
             </button>
             <div className='login-btns'>

@@ -7,5 +7,7 @@ export const srcs = {
   },
 };
 
-export const API_URL_LOGIN = 'http://10.58.1.116:8000';
-export const API_URL_CH = 'http://10.58.2.154:8000';
+export const API_URL_LOGIN = 'http://10.58.6.221:8000';
+export const API_URL_CH = 'http://10.58.6.221:8000';
+export const API_URL_HR = 'http://10.58.6.221:8000';
+export const API_URL_5S = 'http://10.58.6.221:8000';

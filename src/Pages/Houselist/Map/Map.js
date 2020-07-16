@@ -1,7 +1,7 @@
 /*global kakao*/
 import React from 'react';
 import './Map.scss';
-const {kakao} = window;
+const { kakao } = window;
 
 class Map extends React.Component {
   componentDidMount = () => {
@@ -9,7 +9,7 @@ class Map extends React.Component {
   };
 
   componentDidUpdate = (prevProps) => {
-    this.handleMap();
+    if (prevProps !== this.props) this.handleMap();
   };
 
   handleMap = () => {
@@ -58,7 +58,7 @@ class Map extends React.Component {
         var content = `<div style="overflow:hidden;position:relative;width:274;height:300;background-color:white;border-radius:10px;" >
   <img style="z-index:-1;" src=${el.house_images[0]} width = 273px height=182.67px />
   <div style="padding:10px">        
-  <img width = 14px src=${'https://img.icons8.com/fluent/48/000000/star.png'}/>
+  <img width = 14px src='https://img.icons8.com/fluent/48/000000/star.png'/>
   <span style="font-size:14px;margin-botom:7px;padding-left:5px">${el.house_rating}</span>
   <div style="     white-space: nowrap;
   overflow: hidden;
