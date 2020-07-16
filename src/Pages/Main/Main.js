@@ -20,7 +20,6 @@ class Main extends Component {
           <form className="main-form">        
           <SearchBox/>      
           <section className="margin-controller">
-
             <div className="letter-box">
                 <p className="letter-span">이제 가까운 곳에서 소중한 것들을 <br></br> 찾아보세요.</p>         
             </div>
@@ -31,7 +30,6 @@ class Main extends Component {
                   <a className="three-options-wrapper-a">
                   <div className="boxbox">
                   <a className = "firstproductbox" href="https://www.airbnb.co.kr/s/experiences/online">
-
                     <div className="innerbox-controll">
                       <div className="innerbox-controll-inner" >
                         <div className="innerbox-controll-inner2">
@@ -44,9 +42,7 @@ class Main extends Component {
                       <div className="online-experience" title="온라인 체험">온라인 체험</div>
                       <div className="online-experience-des" title="세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한 액티비티">세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한&nbsp;액티비티</div>
                     </div>
-                   
                   </div>
-
                 </a>
                 </li>
               </ul>
@@ -57,7 +53,6 @@ class Main extends Component {
                 <a className="three-options-wrapper-a">
                   <div className="boxbox2">
                     <a className="secondproductbox" href="https://www.airbnb.co.kr/s/all?refinement_paths%5B%5D=%2Fplaylists%2F40044&last_search_session_id=1026b7cc-4f54-4b92-a429-ca631280dde5&search_type=section_navigation">
-
                     <div className="innerbox-controll">
                       <div className="innerbox-controll-inner" >
                         <div className="innerbox-controll-inner2">
@@ -70,8 +65,6 @@ class Main extends Component {
                         <div className="online-experience" title="온라인 체험">가까운 여행지</div>
                         <div className="online-experience-des" title="세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한 액티비티">세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한&nbsp;액티비티</div>
                       </div>
-
-                     
                   </div>
                 </a>
                 </li>
@@ -95,7 +88,6 @@ class Main extends Component {
                       <div className="online-experience" title="온라인 체험">집 전체</div>
                       <div className="online-experience-des" >세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한&nbsp;액티비티</div>
                     </div>
-                   
                   </div>
                 </a>
                 </li>
@@ -172,7 +164,6 @@ class Main extends Component {
         </div>
         </div>
       </form>
-  
   </div>    
   <Footer/>
   </>

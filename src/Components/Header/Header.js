@@ -30,7 +30,6 @@ class Header extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-
   render() {
     return (
       <div className="Nav">
@@ -38,7 +37,6 @@ class Header extends Component {
       </div>
   
     );
-
   }
 }
 

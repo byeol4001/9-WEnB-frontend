@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Component } from 'react';
 import { useHistory } from 'react-router-dom';
 import './SearchBox.scss';
-//import { DateRangePicker, DateRange } from "@matharumanpreet00/react-daterange-picker";
 import { AiOutlineSearch } from 'react-icons/ai';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css'
@@ -9,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {DateRangePicker} from 'react-dates';
 import styled from 'styled-components';
 import {MdLocationOn} from 'react-icons/md'
-//import Axios from 'axios';
 
 function SearchBox (props) {
 
@@ -56,59 +54,6 @@ let list =  ["제주도","제주도 제주시","제주 서귀포시 성산읍", 
   } else {
    guestNum = `게스트 ${adults} 명`;
  }
-
-//  const [filterboxOpen, setFilterboxOpen]
-//  const clickInputBox = (e) => {
-//   e.preventDefault();
-//   setFilterboxOpen (!filterboxOpen);
-//  }
-
-
-//  let checkin, checkout;
-//  if (startDate !== null && endDate !==null) {
-//    checkin = startDate.format("YYYY-MM-DD");
-//    checkout = endDate.format("YYYY-MM-DD");
-//  }
-//  console.log("체크인날짜는:", checkin);
-//  console.log("체크아웃날짜는:", checkout);
-//  console.log(whereto, checkin, checkout, adults);
-
-/*
- const goToList = (a,b) => {
-   console.log (props)
-   
-  //  if (whereto !== null && adults !== null) {
-     props.history.push ( `/stay?address=${a}&guests=${b}` 
-     //`/stay?address=${whereto}&guests=${adults}` //api와 전혀 상관없음.
-     // `/list?whereto=${whereto}&checkin=${checkin}&checkout=${checkout}&adults=${adults}`
-     );
-     //const nextResponse = await fetch(`http://10.58.7.113:8000/stay?address=${whereto}&guests=${adults}`);
-     //const nextJson = await nextResponse.json();
-  //  } else {
-    //  alert ("날짜 / 위치를 입력하세요.")
-   }
-*/
-/*
-const [loading, setLoading] = userState(false);
-const [search, setSearch] = useState('')
-
-useEffect(() => {
-  setLoading(true);
-  Axios
-  .get("")
-  .then(res => {
-    setLocation (res.data);
-    setLoading (false);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-}, [] ); 
-
-const filteredLocation = countries.filter(country => {
-  return country.name.toLowerCase().includes(search.toLowerCase())
-} )
-*/
 
 //위치 인풋 연관검색창 체크인박스 클릭하면 자동으로 닫히게 하기
 const [popUp, setPopUp] = useState(false); 
