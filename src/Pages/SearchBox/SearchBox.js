@@ -60,26 +60,25 @@ const [popUp, setPopUp] = useState(false);
 
 //검색 넘겨주기
 let history = useHistory();
-
   return (
-    <div className = "search-box">
-          <fieldset className ="categories">
-            <button type="button" className = "nobutton">
-              <span className = "category-box">숙소</span>
+    <div className= "search-box">
+          <div className= "categories">
+            <button type="button" className= "nobutton">
+              <span className= "category-box">숙소</span>
             </button>
-            <button type="button" className = "nobutton">
-              <span className = "category-box">장기숙박</span>
+            <button type="button" className= "nobutton">
+              <span className= "category-box">장기숙박</span>
             </button>
-            <button type="button" className = "nobutton">
-              <span className = "category-box">체험</span>
+            <button type="button" className= "nobutton">
+              <span className= "category-box">체험</span>
             </button>
-            <button type="button" className = "nobutton">
-            <div className="category-box-online"><a href="" className = "go-online">온라인 체험
+            <button type="button" className= "nobutton">
+            <div className="category-box-online"><a href="" className= "go-online">온라인 체험
             <div className="new-shape"><div className="new">NEW</div></div>
             </a>
             </div>
             </button>
-          </fieldset>
+          </div>
           <div className="schedule-search">
             <div className="schedule-input-box">
               <div className="place-box">
@@ -88,23 +87,19 @@ let history = useHistory();
                 placeholder="어디로 여행가세요?"
                 onChange = {(e) => setWhereto(e.target.value)}
                 value = {whereto}
-                //onClick={()=> setPopUp(false)} //고정값을 false로 
                 >
                 </input>
               </div>
-              { whereto.length  !== 0 && popUp===false ?(
-              <div className ="filter-location">
-                     <div className="filter-box">
+              { whereto.length !== 0 && popUp === false ?(
+              <div className= "filter-location">
+                     <div className= "filter-box">
                        <ul>
                          {list.map((name) => {
-                           if(whereto.length !==0){
-                           if(name.toLowerCase().startsWith(whereto.toLowerCase())){
+                           if(whereto.length !==0 && name.toLowerCase().startsWith(whereto.toLowerCase())){
                              return <div className= "filtered-list"><span><MdLocationOn style={{color:"#212529"}}/><div className="filtered-list-box">{name}</div></span></div>
                            } else {
                              return false;
                            }
-                         }
-                          return <div className= "filtered-list"><span><MdLocationOn style={{color:"#212529"}}/><div className="filtered-list-box">{name}</div></span></div>
                           })}
                        </ul>
                      </div>
@@ -112,36 +107,36 @@ let history = useHistory();
               ) : false}
             </div>
             <div className= "checkin" onClick={()=> setPopUp(true)}>
-            <div className="check-in-and-out">체크인 / 체크아웃</div>
-            <DateRangePickerWrap>
-            <DateRangePicker
-              startDate= {startDate} //{this.state.startDate} // momentPropTypes.momentObj or null,
-              startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-              endDate={endDate}//{this.state.endDate} // momentPropTypes.momentObj or null,
-              endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-              onDatesChange={({ startDate, endDate }) => onDatesChange({startDate, endDate})}//=> this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-              focusedInput= {focusedInput} // {this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-              onFocusChange={(focusedInput) => setFocusInput(focusedInput)} //{focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-              showClearDates= {true}
-              startDatePlaceholderText={"날짜 추가"}
-              endDatePlaceholderText={"날짜 추가"}
-              customArrowIcon={` `}
-              />
-              </DateRangePickerWrap>
-              <button className = "checkin-button" ></button>
-              <button className = "checkin-button"></button>
-            </div>
+              <div className= "check-in-and-out">체크인 / 체크아웃</div>
+              <DateRangePickerWrap>
+              <DateRangePicker
+                startDate= {startDate} //{this.state.startDate} // momentPropTypes.momentObj or null,
+                startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                endDate={endDate}//{this.state.endDate} // momentPropTypes.momentObj or null,
+                endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                onDatesChange={({ startDate, endDate }) => onDatesChange({startDate, endDate})}//=> this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                focusedInput= {focusedInput} // {this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                onFocusChange={(focusedInput) => setFocusInput(focusedInput)} //{focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                showClearDates= {true}
+                startDatePlaceholderText={"날짜 추가"}
+                endDatePlaceholderText={"날짜 추가"}
+                customArrowIcon={` `}
+                />
+                </DateRangePickerWrap>
+                <button className = "checkin-button"/>
+                <button className = "checkin-button"/>
+              </div>
             <div className= "capacity">
-            <div className = "check-capacity">인원</div>
-              <button className = "capacity-button" onClick={OpenHandler}>
+            <div className= "check-capacity">인원</div>
+              <button className= "capacity-button" onClick={OpenHandler}>
                 <div className="capacity-box">        
                   <div className= "add-guest">{adults > 0 ? `게스트 ${adults} 명` : "게스트 추가"}</div>
                 </div>
               </button>
 
               {open ? (
-              <div className = "the-number-add">
-                <div className = "the-number-add-each-box">
+              <div className= "the-number-add">
+                <div className= "the-number-add-each-box">
                   <div>
                     <p>성인</p>
                     <p>만 13세 이상</p>
@@ -158,45 +153,45 @@ let history = useHistory();
                     -  
                     </button>
                     <div>{adults < 0 ? 0 : adults}</div>
-                    <button  className="thenumber-btn"
+                    <button  className= "thenumber-btn"
                      onClick = {onClickPlusHandler} 
                     >
                     +  
                     </button>
                   </div>
                 </div> 
-                <div className = "the-number-add-each-box">
+                <div className= "the-number-add-each-box">
                   <div>
                     <p>어린이</p>
                     <p>2~12세</p>
                   </div> 
-                  <div  className="adding-box" >
-                    <button className="thenumber-btn-color-light">-</button>
+                  <div  className= "adding-box" >
+                    <button className= "thenumber-btn-color-light">-</button>
                     <div>0</div>
-                    <button className="thenumber-btn">+</button>
+                    <button className= "thenumber-btn">+</button>
                   </div>
                 </div> 
-                <div className = "the-number-add-each-box">
+                <div className= "the-number-add-each-box">
                   <div>
                     <p>유아</p>
                     <p>2세 미만</p>
                   </div> 
-                  <div  className="adding-box" >
-                    <button className="thenumber-btn-color-light">-</button>
+                  <div  className= "adding-box" >
+                    <button className= "thenumber-btn-color-light">-</button>
                     <div>0</div>
-                    <button className="thenumber-btn">+</button>
+                    <button className= "thenumber-btn">+</button>
                   </div>
                 </div> 
               </div>
               ) : false}
             </div>
-            <div className="gumsaek">
-              <button className="gumsaek-btn"
-              onClick = {()=> history.push(`/stay?address=${whereto}&guests=${adults}`)}//goToList(whereto, adults)}
+            <div className= "gumsaek">
+              <button className= "gumsaek-btn"
+              onClick={()=> history.push(`/stay?address=${whereto}&guests=${adults}`)}//goToList(whereto, adults)}
               >
-                <div className="btnbtn">
-                <span className="icon"> <AiOutlineSearch style={{color:"#fff"}}/></span>
-                <span className="gumsaek-letter">
+                <div className= "btnbtn">
+                <span className= "icon"> <AiOutlineSearch style={{color:"#fff"}}/></span>
+                <span className= "gumsaek-letter">
                 검색</span>
                 </div>
               </button>

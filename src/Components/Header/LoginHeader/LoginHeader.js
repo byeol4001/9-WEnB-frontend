@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './LoginHeader.scss'
 import LogoSVG from '../logoSVG/SVG';
+import {srcs} from '../../../config';
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 class LoginHeader extends React.Component{
   render () {
@@ -12,7 +14,6 @@ class LoginHeader extends React.Component{
             <div className="header-wrapper-logo">
              <LogoSVG/>
             </div>
-
               <div className="right-wrapper-guide" aria-label="메인">
                 <div className ="desktopMenuList">
                   <li>
@@ -28,7 +29,9 @@ class LoginHeader extends React.Component{
                   </li>                   
                   <div className="login">
                     <a className="a-login" data-no-client-routing="" data-testid="cypress-headernav-login" href="/login">
-                      <div className="login-letter">로그인</div>
+                      <div className="login-letter">    
+                        <GiHamburgerMenu style={{color:"#222"}} className="hamberger-menu"/>
+                        <img className="login-logo" src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3"/></div>
                     </a>
                   </div>
                 </div> 

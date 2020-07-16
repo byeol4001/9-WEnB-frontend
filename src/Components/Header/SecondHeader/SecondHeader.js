@@ -12,11 +12,11 @@ class SecondHeader extends React.Component{
     };
   };
 
-  OpenSearchHandler = () => {
+  OpenSearchHandler=()=>{
     this.setState({isSearchBoxOpen: !this.state.isSearchBoxOpen})
   }
  
-  CloseSearchHandler = () => {
+  CloseSearchHandler=()=>{
      this.setState({isSearchBoxOpen:  false})
  }
  

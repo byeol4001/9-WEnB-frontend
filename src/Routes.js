@@ -34,7 +34,6 @@ class Routes extends React.Component {
             component={Reservation}
           />
         </Switch>
-
       </Router>
     );
   }
