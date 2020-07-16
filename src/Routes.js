@@ -18,14 +18,11 @@ class Routes extends React.Component {
     return (
       <Router>
         <Switch>
-
-
-          <Route exact path='/' component={Header} />
           <Route exact path='/stay' component={Houselist} />
           <Route exact path='/wishlist' component={Wishlist} />
           <Route exact path="/loginheader" component={LoginHeader}/>
           <Route exact path='/login' component={Login} />
-          <Route exact path="/main" component={Main}/>
+          <Route exact path="/" component={Main}/>
           <Route exact path="/search" component={SearchBox}/>
           <Route exact path="/stay?address=:address&guests=:guest" component={Houselist} />
           <Route exact path="/detailpage/" component={DatailPage} />
@@ -36,7 +33,6 @@ class Routes extends React.Component {
             path="/Reservation?reservation_id:id"
             component={Reservation}
           />
-
         </Switch>
 
       </Router>

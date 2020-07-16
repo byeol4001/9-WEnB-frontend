@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-          <div className = "footer-container">
+        <div className = "footer-container">
             <section className="introduction-box">
               <h1 className="introduction">소개</h1>
               <ul className="introduction-ul" >
@@ -89,7 +89,7 @@ class Footer extends Component {
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </footer>     
     );
   }

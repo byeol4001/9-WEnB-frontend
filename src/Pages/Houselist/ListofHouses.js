@@ -15,7 +15,6 @@ function ListofHouses({ price, bedroom, name, images, address, type, capacity, b
           })}
         </AwesomeSlider>
       </div>
-
       <section className='house-detail'>
         <div className='house-main-contents'>
           <div className='house-header'>
@@ -43,7 +42,6 @@ function ListofHouses({ price, bedroom, name, images, address, type, capacity, b
           </span>
           <span className="price-per-night">/1박</span>
           </div>
-
         </div>
         <div className='heart-icon'>
           <IoIosHeartEmpty style={{ height: '26px', width: '26px' }} />

@@ -8,16 +8,14 @@ import 'react-dates/lib/css/_datepicker.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {DateRangePicker} from 'react-dates';
 import styled from 'styled-components';
-import Axios from 'axios';
+import {MdLocationOn} from 'react-icons/md'
+//import Axios from 'axios';
 
 function SearchBox (props) {
 
+let list =  ["제주도","제주도 제주시","제주 서귀포시 성산읍", "제주도 애월읍", "제주 애월읍 곽지과물해변","제주도 서귀포"]
  //어디로여행
  const[whereto, setWhereto] = useState(""); //여기 0으로 두면 위치박스에0이라고 뜸. 빈칸주기
- const onChange = (e) => {
-   setWhereto(e.target.value);
-   console.log("어디로")
- }
 
  //체크인, 체크아웃 from react-dates library
  const [startDate, setStartDate] = useState(null);
@@ -58,6 +56,13 @@ function SearchBox (props) {
   } else {
    guestNum = `게스트 ${adults} 명`;
  }
+
+//  const [filterboxOpen, setFilterboxOpen]
+//  const clickInputBox = (e) => {
+//   e.preventDefault();
+//   setFilterboxOpen (!filterboxOpen);
+//  }
+
 
 //  let checkin, checkout;
 //  if (startDate !== null && endDate !==null) {
@@ -105,20 +110,14 @@ const filteredLocation = countries.filter(country => {
 } )
 */
 
-let list = ["제주도","제주 "]
-let [filter, setFilter] = useState("")
-const filterHandler = (e) => {
-  e.preventDefault();
+//위치 인풋 연관검색창 체크인박스 클릭하면 자동으로 닫히게 하기
+const [popUp, setPopUp] = useState(false); 
 
-}
-
-
+//검색 넘겨주기
 let history = useHistory();
-
 
   return (
     <div className = "search-box">
-    
           <fieldset className ="categories">
             <button type="button" className = "nobutton">
               <span className = "category-box">숙소</span>
@@ -130,7 +129,10 @@ let history = useHistory();
               <span className = "category-box">체험</span>
             </button>
             <button type="button" className = "nobutton">
-            <div className="category-box-online"><a href="" className = "go-online">온라인 체험</a></div>
+            <div className="category-box-online"><a href="" className = "go-online">온라인 체험
+            <div className="new-shape"><div className="new">NEW</div></div>
+            </a>
+            </div>
             </button>
           </fieldset>
           <div className="schedule-search">
@@ -139,17 +141,32 @@ let history = useHistory();
                 <div className = "place">위치</div>
                 <input className= "place-input"
                 placeholder="어디로 여행가세요?"
-                onChange = {onChange}
+                onChange = {(e) => setWhereto(e.target.value)}
                 value = {whereto}
-              
-              
+                //onClick={()=> setPopUp(false)} //고정값을 false로 
                 >
-                  
-               
                 </input>
               </div>
-            </div>        
-            <div className= "checkin">
+              { whereto.length  !== 0 && popUp===false ?(
+              <div className ="filter-location">
+                     <div className="filter-box">
+                       <ul>
+                         {list.map((name) => {
+                           if(whereto.length !==0){
+                           if(name.toLowerCase().startsWith(whereto.toLowerCase())){
+                             return <div className= "filtered-list"><span><MdLocationOn style={{color:"#212529"}}/><div className="filtered-list-box">{name}</div></span></div>
+                           } else {
+                             return false;
+                           }
+                         }
+                          return <div className= "filtered-list"><span><MdLocationOn style={{color:"#212529"}}/><div className="filtered-list-box">{name}</div></span></div>
+                          })}
+                       </ul>
+                     </div>
+                   </div>  
+              ) : false}
+            </div>
+            <div className= "checkin" onClick={()=> setPopUp(true)}>
             <div className="check-in-and-out">체크인 / 체크아웃</div>
             <DateRangePickerWrap>
             <DateRangePicker
@@ -166,17 +183,13 @@ let history = useHistory();
               customArrowIcon={` `}
               />
               </DateRangePickerWrap>
-              <button /*onClick = {this.alertStartDate}*/ className = "checkin-button" >              
-              </button>
-              <button /*onClick = {this.alertEndDate}*/ className = "checkin-button">       
-              </button>
+              <button className = "checkin-button" ></button>
+              <button className = "checkin-button"></button>
             </div>
-
             <div className= "capacity">
             <div className = "check-capacity">인원</div>
               <button className = "capacity-button" onClick={OpenHandler}>
-                <div className="capacity-box">
-                
+                <div className="capacity-box">        
                   <div className= "add-guest">{adults > 0 ? `게스트 ${adults} 명` : "게스트 추가"}</div>
                 </div>
               </button>
@@ -195,8 +208,7 @@ let history = useHistory();
                       {color: "rgb(235, 235, 235)", borderColor: "rgb(235, 235, 235)"} 
                        : undefined
                      }
-                      onClick={onClickMinusHandler} 
-                    
+                      onClick={onClickMinusHandler}        
                     >  
                     -  
                     </button>
@@ -232,10 +244,7 @@ let history = useHistory();
                 </div> 
               </div>
               ) : false}
-
-
             </div>
-
             <div className="gumsaek">
               <button className="gumsaek-btn"
               onClick = {()=> history.push(`/stay?address=${whereto}&guests=${adults}`)}//goToList(whereto, adults)}

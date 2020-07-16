@@ -8,8 +8,8 @@
   background-color: #fff;
   margin: 0;
   padding: 0;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    Helvetica Neue, sans-serif;
+  // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+  //   Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 1.43;
   height: 54px;
@@ -30,7 +30,6 @@
     //border-bottom: #8e8e8e;
     justify-content: center;
     z-index: 1000;
-
 
     .header-wrapper-main {
       display: flex;
@@ -127,7 +126,7 @@
         border: 1px solid #dfdcdc;
         cursor: pointer;
         display: inline-flex;
-        font-family: inherit;
+        //font-family: inherit;
         font-size: 13px;
         font-weight: 600;
         line-height: 18px;
