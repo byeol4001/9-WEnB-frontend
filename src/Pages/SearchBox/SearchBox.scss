@@ -402,11 +402,16 @@
     margin: 0em;
     text-rendering: auto;
     font: 400 13.3333px Arial;
+    &.thenumber-btn-re {
+      color: rgb(235, 235, 235);
+      border-color: rgb(235, 235, 235);
+    }
 
     :focus {
       outline: none;
     }
   }
+
   .thenumber-btn-color-light {
     color: rgb(235, 235, 235);
     border-color: rgb(235, 235, 235);
@@ -422,6 +427,10 @@
   .adding-box {
     display: flex;
     align-items: center;
+    // .active {
+    //   color: "rgb(235, 235, 235)";
+    //   border-color: "rgb(235, 235, 235)";
+    // }
     div {
       padding: 0 9px;
     }

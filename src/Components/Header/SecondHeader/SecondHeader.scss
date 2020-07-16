@@ -171,15 +171,9 @@
         display: flex;
       }
 
-      a {
+      ._each {
         display: inline-block;
         padding-bottom: -20px;
-      }
-      a:link {
-        text-decoration: none;
-      }
-      a:visited {
-        text-decoration: none;
       }
     }
 
@@ -236,10 +230,6 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       position: relative;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
       display: flex;
       -webkit-align-items: center;
       align-items: center;

@@ -13,7 +13,7 @@ function SearchBox (props) {
 
 let list =  ["제주도","제주도 제주시","제주 서귀포시 성산읍", "제주도 애월읍", "제주 애월읍 곽지과물해변","제주도 서귀포"]
  //어디로여행
- const[whereto, setWhereto] = useState(""); //여기 0으로 두면 위치박스에0이라고 뜸. 빈칸주기
+ const[whereTo, setWhereTo] = useState(""); //여기 0으로 두면 위치박스에0이라고 뜸. 빈칸주기
 
  //체크인, 체크아웃 from react-dates library
  const [startDate, setStartDate] = useState(null);
@@ -55,6 +55,8 @@ let list =  ["제주도","제주도 제주시","제주 서귀포시 성산읍", 
    guestNum = `게스트 ${adults} 명`;
  }
 
+const [isthenumberBtn, setIsthenumberBtn] = useState(false);
+
 //위치 인풋 연관검색창 체크인박스 클릭하면 자동으로 닫히게 하기
 const [popUp, setPopUp] = useState(false); 
 
@@ -85,17 +87,17 @@ let history = useHistory();
                 <div className = "place">위치</div>
                 <input className= "place-input"
                 placeholder="어디로 여행가세요?"
-                onChange = {(e) => setWhereto(e.target.value)}
-                value = {whereto}
+                onChange = {(e) => setWhereTo(e.target.value)}
+                value = {whereTo}
                 >
                 </input>
               </div>
-              { whereto.length !== 0 && popUp === false ?(
+              { whereTo.length !== 0 && popUp === false ?(
               <div className= "filter-location">
                      <div className= "filter-box">
                        <ul>
                          {list.map((name) => {
-                           if(whereto.length !==0 && name.toLowerCase().startsWith(whereto.toLowerCase())){
+                           if(whereTo.length !==0 && name.toLowerCase().startsWith(whereTo.toLowerCase())){
                              return <div className= "filtered-list"><span><MdLocationOn style={{color:"#212529"}}/><div className="filtered-list-box">{name}</div></span></div>
                            } else {
                              return false;
@@ -142,12 +144,7 @@ let history = useHistory();
                     <p>만 13세 이상</p>
                   </div> 
                   <div className="adding-box" >
-                    <button className="thenumber-btn"
-                    style={
-                      adults <= 0 ? 
-                      {color: "rgb(235, 235, 235)", borderColor: "rgb(235, 235, 235)"} 
-                       : undefined
-                     }
+                    <button className= {`thenumber-btn ${adults <= 0 && "thenumber-btn-re"}`}
                       onClick={onClickMinusHandler}        
                     >  
                     -  
@@ -187,7 +184,7 @@ let history = useHistory();
             </div>
             <div className= "gumsaek">
               <button className= "gumsaek-btn"
-              onClick={()=> history.push(`/stay?address=${whereto}&guests=${adults}`)}//goToList(whereto, adults)}
+              onClick={()=> history.push(`/stay?address=${whereTo}&guests=${adults}`)}
               >
                 <div className= "btnbtn">
                 <span className= "icon"> <AiOutlineSearch style={{color:"#fff"}}/></span>
