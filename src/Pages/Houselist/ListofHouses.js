@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
-import './ListofHouses.scss';
 import { FaStar } from 'react-icons/fa';
 import { IoIosHeartEmpty } from 'react-icons/io';
+import { API_URL_HR } from '../.././config';
+import 'react-awesome-slider/dist/styles.css';
+import './ListofHouses.scss';
 
-function ListofHouses({ price, bedroom, name, images, address, type, capacity, bathroom, bed, rating, superhost, lat, lon, onClick, onMouseOver }) {
+function ListofHouses({ id, price, bedroom, name, images, address, type, capacity, bathroom, bed, rating, onClick, onMouseOver }) {
+  const [hovered, setHovered] = useState(false);
+  let history = useHistory();
+
+  const heartClickHandler = () => {
+    history.push('/wishlist');
+
+    fetch(`${API_URL_HR}/user/wishlist`, {
+      method: 'POST',
+      headers: {
+        Authorization: localStorage.getItem('token'),
+      },
+      body: JSON.stringify({
+        stay_id: id,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  };
+
+  const mouseOvered = () => {
+    setHovered(true);
+  };
+
   return (
-    <div className='ListofHouses' onMouseOver={onMouseOver}>
+    <div className='ListofHouses' mouseOver={onMouseOver}>
       <div className='house-imgs'>
         <AwesomeSlider>
           {images.map((img) => {
@@ -16,7 +41,7 @@ function ListofHouses({ price, bedroom, name, images, address, type, capacity, b
         </AwesomeSlider>
       </div>
 
-      <section className='house-detail'>
+      <section className='house-detail' onClick={() => onClick(hovered)}>
         <div className='house-main-contents'>
           <div className='house-header'>
             <div className='type-and-name'>
@@ -33,19 +58,17 @@ function ListofHouses({ price, bedroom, name, images, address, type, capacity, b
         </div>
         <div className='house-rating-with-star'>
           <div>
-          <span>
-            <FaStar style={{ color: '#FF385C' }} />
-          </span>
-          <h3>{rating}</h3>
+            <span>
+              <FaStar style={{ color: '#FF385C' }} />
+            </span>
+            <h3>{rating}</h3>
           </div>
-        <div className="price">
-          <span>₩{parseInt(price).toLocaleString()}
-          </span>
-          <span className="price-per-night">/1박</span>
+          <div className='price'>
+            <span>₩{parseInt(price).toLocaleString()}</span>
+            <span className='price-per-night'>/1박</span>
           </div>
-
         </div>
-        <div className='heart-icon'>
+        <div onClick={heartClickHandler} onMouseOver={mouseOvered} className='heart-icon'>
           <IoIosHeartEmpty style={{ height: '26px', width: '26px' }} />
         </div>
       </section>

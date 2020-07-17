@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 import './LoginHeader.scss'
 import LogoSVG from '../logoSVG/SVG';
+import Login from '../../Login/Login';
+
 
 class LoginHeader extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      isLoginOpen: false,
+    };
+  }
+  loginOpenHandler = () => {
+    this.setState({ isLoginOpen: true });
+  };
+
+  loginCloseHandler = () => {
+    this.setState({ isLoginOpen: false });
+  };
   render () {
     return(
       <div className="Nav">
         <header className="header">
           <nav className="header-wrapper-main">
-
             <div className="header-wrapper-logo">
              <LogoSVG/>
             </div>
@@ -26,15 +40,16 @@ class LoginHeader extends React.Component{
                       <div className="each-menu-narrow">도움말</div>
                     </a>
                   </li>                   
-                  <div className="login">
-                    <a className="a-login" data-no-client-routing="" data-testid="cypress-headernav-login" href="/login">
-                      <div className="login-letter">로그인</div>
+                  <div className='login' onClick={this.loginOpenHandler}>
+                  <a className='a-login' data-no-client-routing='' data-testid='cypress-headernav-login'>
+                    <div className='login-letter'>로그인</div>
                     </a>
                   </div>
                 </div> 
               </div>
            
           </nav>
+          {this.state.isLoginOpen && <Login />}
         </header>
       </div>
     )

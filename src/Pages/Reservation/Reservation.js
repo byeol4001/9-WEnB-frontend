@@ -1,28 +1,31 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import {
-  FaAirbnb,
-  FaChild,
-  FaDog,
-  FaBirthdayCake,
-  FaSmokingBan,
-} from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { API_URL_HR } from '../../config';
+import { FaAirbnb, FaChild, FaDog, FaBirthdayCake, FaSmokingBan } from 'react-icons/fa';
+import { AiFillSound, AiFillStar, AiOutlineUsergroupAdd, AiOutlineCalendar, AiOutlineArrowRight } from 'react-icons/ai';
+import { FcKey } from 'react-icons/fc';
 
-import {
-  AiFillSound,
-  AiFillStar,
-  AiOutlineUsergroupAdd,
-  AiOutlineCalendar,
-  AiOutlineArrowRight,
-} from "react-icons/ai";
-import { FcKey } from "react-icons/fc";
+const Reservation = (props) => {
+  const [data, setData] = useState('');
+  let reservationId = props.location.search.split('=')[1];
 
-const Reservation = () => {
-  const [data, setData] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch(`${API_URL_HR}/reservations?reservation_id=${reservationId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: localStorage.getItem('token'),
+        },
+      })
+        .then((res) => res.json())
+        .then((res) => setData(res));
+    }
+    fetchData();
+  }, []);
 
   const countCheckIn = () => {
     let date = data.check_in;
-    let dateconvert = date.split("-");
+    let dateconvert = date.split('-');
     let year = dateconvert[0];
     let month = dateconvert[1];
     let day = dateconvert[2];
@@ -32,7 +35,7 @@ const Reservation = () => {
 
   const countCheckOut = () => {
     let date = data.check_out;
-    let dateconvert = date.split("-");
+    let dateconvert = date.split('-');
     let year = dateconvert[0];
     let month = dateconvert[1];
     let day = dateconvert[2];
@@ -40,46 +43,17 @@ const Reservation = () => {
     return result;
   };
 
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(
-        // `http://10.58.7.55:8000/reservation?reservation_id=${data.reservation_id}`,
-        `./data/data_reservation.json`,
-        {
-          method: "GET",
-          headers: {
-            Authorization:
-              "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.nmQnq_9lCt-v4h4n0_ts9XdwVQ0WXvkzqyV2K1TZHH8",
-          },
-        }
-      );
-      res.json().then((res) => setData(res));
-    }
-    data.check_in && fetchData();
-  }, []);
-
-  let ReserveConfirm = () => {
-    useEffect(() => {
-      async function fetchId() {
-        let response = await fetch(
-          //`http://10.58.7.55:8000/reservation?reservation_id=${data.reservation_id}`,
-          `./data/data_reservation.json`,
-          {
-            method: "PATCH",
-            headers: {
-              Authorization:
-                "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.nmQnq_9lCt-v4h4n0_ts9XdwVQ0WXvkzqyV2K1TZHH8",
-            },
-          }
-        );
-      }
-      fetchId();
-    }, []);
+  let reserveConfirm = async () => {
+    await fetch(`${API_URL_HR}/reservations?reservation_id=${reservationId}`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: localStorage.getItem('token'),
+      },
+    }).then(alert('예약이 완료 되었습니다'));
   };
 
   let stayDateCount = () => {
-    let result =
-      Math.abs((countCheckIn() - countCheckOut()) / 1000 / 60 / 60 / 24) - 1;
+    let result = Math.abs((countCheckIn() - countCheckOut()) / 1000 / 60 / 60 / 24) - 1;
     return result;
   };
 
@@ -88,7 +62,7 @@ const Reservation = () => {
       <ReserveTop>
         <FaAirbnb />
         <ul>
-          <li className="focus">1. 숙소 이용규칙 확인</li>
+          <li className='focus'>1. 숙소 이용규칙 확인</li>
           <li>2. 게스트 정보 입력</li>
           <li>3. 확인 및 결제</li>
         </ul>
@@ -101,21 +75,21 @@ const Reservation = () => {
           </h3>
           <ReserveDateTime>
             <div>
-              <div className="reserve-date-box">
+              <div className='reserve-date-box'>
                 <span>{data && data.check_in.substr(5, 2)}월</span>
                 <span>{data && data.check_in.substr(8, 2)}</span>
               </div>
-              <div className="reserve-time">
+              <div className='reserve-time'>
                 <span>체크인</span>
                 <span>오후 3:00</span>
               </div>
             </div>
             <div>
-              <div className="reserve-date-box">
+              <div className='reserve-date-box'>
                 <span>{data && data.check_out.substr(5, 2)}월</span>
                 <span>{data && data.check_out.substr(8, 2)}</span>
               </div>
-              <div className="reserve-time">
+              <div className='reserve-time'>
                 <span>체크아웃</span>
                 <span>오전 11:00</span>
               </div>
@@ -127,7 +101,6 @@ const Reservation = () => {
           </h4>
           <Line />
           <h5>주의할 사항</h5>
-
           <ul>
             <li>
               <FaChild />
@@ -150,58 +123,51 @@ const Reservation = () => {
               소음이 발생할 수 있음
             </li>
           </ul>
-          <Button onClick={ReserveConfirm}>동의 및 계속하기</Button>
+          <Button onClick={reserveConfirm}>동의 및 계속하기</Button>
         </ReserveLeft>
-
         <ReserveRight>
           <ReservePriceWrap>
-            <dlv class="reserve-right-title">
+            <dlv class='reserve-right-title'>
               <span>{data.stay_title}</span>
               <span>{data.stay_sub_title}</span>
               <span>
                 <AiFillStar />
-                {Number(data.review_average_score).toFixed(1)}
-                <p>({data.review_count})</p>
+                4.4
+                <p>(44)</p>
               </span>
             </dlv>
             <Line inner />
-            <div class="reserve-right-datecheck">
+            <div class='reserve-right-datecheck'>
               <div>
                 <AiOutlineUsergroupAdd />
-                <span>게스트 {data.geust}명</span>
+                <span>게스트 {data.guest}명</span>
               </div>
               <div>
                 <AiOutlineCalendar />
                 <span>
                   {data.check_in}
-                  <AiOutlineArrowRight className="arrow" />
+                  <AiOutlineArrowRight className='arrow' />
                   {data.check_out}
                 </span>
               </div>
             </div>
             <Line inner />
-            <div className="price-box">
+            <div className='price-box'>
               <span>
-                ₩{parseInt(data.one_night_price).toLocaleString()} X{" "}
-                {data && stayDateCount()}박
+                ₩{parseInt(data.one_night_price).toLocaleString()} X {data && stayDateCount()}박
               </span>
-              <p>
-                ₩
-                {parseInt(
-                  data.one_night_price * Number(data && stayDateCount())
-                ).toLocaleString()}
-              </p>
+              <p>₩{parseInt(data.one_night_price * Number(data && stayDateCount())).toLocaleString()}</p>
             </div>
-            <div className="price-box">
+            <div className='price-box'>
               <span>서비스 수수료</span>
               <p>₩{parseInt(data.service_fee).toLocaleString()}</p>
             </div>
-            <div className="price-box">
+            <div className='price-box'>
               <span>숙박세와 수수료</span>
               <p>₩{parseInt(data.occupancy_taxes).toLocaleString()}</p>
             </div>
             <Line inner />
-            <div className="price-box totalprice-box">
+            <div className='price-box totalprice-box'>
               <span>총 합계 (KRW)</span>
               <p>{parseInt(data.total_price).toLocaleString()}</p>
             </div>
@@ -218,6 +184,9 @@ const Reservation = () => {
     </>
   );
 };
+
+export default Reservation;
+
 const ReserveWrap = styled.div`
   display: flex;
   position: relative;
@@ -226,6 +195,7 @@ const ReserveWrap = styled.div`
   padding: 30px 0;
   color: #484848;
 `;
+
 const ReserveTop = styled.div`
   display: flex;
   align-items: center;
@@ -243,7 +213,7 @@ const ReserveTop = styled.div`
     li:nth-child(2) {
       margin-right: 13px;
       &:after {
-        content: ">";
+        content: '>';
         margin-left: 13px;
         color: #717171 !important;
         font-weight: 400 !important;
@@ -255,6 +225,7 @@ const ReserveTop = styled.div`
     }
   }
 `;
+
 const ReserveLeft = styled.div`
   width: 60%;
   h2 {
@@ -267,7 +238,7 @@ const ReserveLeft = styled.div`
     font-size: 18px;
     font-weight: 900;
     &::after {
-      content: "박";
+      content: '박';
     }
   }
   div {
@@ -312,6 +283,7 @@ const ReserveLeft = styled.div`
     }
   }
 `;
+
 const ReserveDateTime = styled.div`
   .reserve-date-box,
   .reserve-time {
@@ -324,7 +296,6 @@ const ReserveDateTime = styled.div`
     justify-content: center;
     font-weight: 900;
     font-size: 10px;
-
     width: 75px;
     height: 57px;
     margin-right: 10px;
@@ -336,7 +307,6 @@ const ReserveDateTime = styled.div`
       margin-top: 3px;
     }
   }
-
   .reserve-time {
     span:nth-child(1) {
       font-size: 13px;
@@ -348,6 +318,7 @@ const ReserveDateTime = styled.div`
     }
   }
 `;
+
 const Button = styled.button`
   display: block;
   width: 170px;
@@ -359,13 +330,9 @@ const Button = styled.button`
   font-size: 15px;
   border-radius: 7px;
   text-align: center;
-  background: linear-gradient(
-    153deg,
-    rgba(255, 55, 92, 1) 0%,
-    rgba(241, 43, 85, 1) 57%,
-    rgba(212, 0, 101, 1) 100%
-  );
+  background: linear-gradient(153deg, rgba(255, 55, 92, 1) 0%, rgba(241, 43, 85, 1) 57%, rgba(212, 0, 101, 1) 100%);
 `;
+
 const ReserveRight = styled.div`
   width: 35%;
   margin: 0 0 80px 5%;
@@ -423,6 +390,7 @@ const ReserveRight = styled.div`
     margin: 20px 0 0;
   }
 `;
+
 const ReservePriceWrap = styled.div`
   padding: 40px;
   border: 1px solid #e4e4e4;
@@ -446,10 +414,10 @@ const ReserveBottom = styled.div`
     }
   }
 `;
+
 const Line = styled.hr`
   border: 0px;
   height: 1px;
   background-color: #ddd;
   margin: 27px 0;
 `;
-export default Reservation;

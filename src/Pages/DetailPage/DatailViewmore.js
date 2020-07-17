@@ -11,7 +11,7 @@ const DatailViewmore = (props) => {
         propsbox.map((box) => (
           <ViewmoreBox>
             <Link to="/">
-              <img src={box.house_images[0]} alt="집이미지" />
+              <img src={box.house_images} alt="집이미지" />
               <ViewmoreTextbox>
                 <span className="text-wrap">
                   {!box.house_superhost ? (
