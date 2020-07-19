@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# "여행은 살아보는거야!" 깔끔한 UI와 다양한 기능을 구현해 볼 수 있는 Airbnb 웹사이트 클론 프로젝트🛌🏼🏄🏼‍♂️🚵🏼‍♀️
+에어비앤비는 2008년 8월 시작되었으며, 자신의 방이나 집, 별장 등 사람이 지낼 수 있는 모든 공간을 임대할 수 있는 세계 최대의 숙박 공유 서비스이다. 유저가 직접 소개글을 작성하고 이미지를 올리는 형태의 사이트다보니 페이지가 다양하고 구현할 내용이 많았지만, 이번 프로젝트에서는 에어비앤비의 가장 기본적이며 중심이 되는 기능인 예약 기능을 위주로 기획하여 클론을 진행하였다.
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+![](https://images.velog.io/images/junghyunhao/post/ac0a26aa-e2af-439b-baac-4c1b2c5c88b4/%EC%95%95%EC%B6%95.gif)
 
-### `yarn start`
+[전체 웹페이지 데모 영상 Youtube 링크] (https://www.youtube.com/watch?v=BR-Jhm8-Exg)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### 🚩 프로젝트 기간
+**2020년 7월 6일~7월 17일 (총 2주)**<br>
 
-### `yarn test`
+프론트 3명, 백엔드 3명
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📁 프로젝트 깃허브 주소 
+프론트 : https://github.com/wecode-bootcamp-korea/9-WEnB-frontend<br>
 
-### `yarn build`
+백엔드 : https://github.com/wecode-bootcamp-korea/9-WEnB-backend
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🤼‍ 사용된 기술 스택 (프론트)
+#### 사용한 언어
+	- HTML
+	- Scss
+	- JavaScript
+	- React(functional components 와 hooks)
+	- styled components
 
-### `yarn eject`
+#### 사용한 React library/API
+	- awesome-slider
+	- react-icons 
+	- react-sticky-box
+	- DateRangePicker 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 커뮤니케이션 및 버전 관리
+	- Slack
+    - Trello
+    - Postman
+    - Git / Github
+    
+    <br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🤼‍ 사용된 기술 스택 (백엔드)
+- Python
+- Django
+- Beautifulsoup, Selenium
+- Bcrypt
+- JWT
+- Unittest
+- MySQL
+- CORS headers
+- Git, Github
+- AWS EC2, RDS
+- Docker (edited) 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 🌐 구현 기능/페이지 
 
-## Learn More
+1. 메인페이지
+- search bar
+- nav bar
+- main
+- footer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. 숙소 리스트 
+- 숙소 위치 카카오 지도 마커 표현
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. 위시 리스트
+- 좋아요 기능 
 
-### Code Splitting
+4. 로그인
+- 카카오 소셜 로그인 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+5. 숙소 상세 페이지 
+- 캘린더 라이브러리 사용 한 예약 기능 구현 
 
-### Analyzing the Bundle Size
+6. 예약 확인 페이지 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
