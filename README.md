@@ -12,6 +12,7 @@
 [![Watch the video](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c63668bb-656b-4968-a733-66058e0a3ef4/.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200905%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200905T043828Z&X-Amz-Expires=86400&X-Amz-Signature=02d05931531bee011bac86b2469ee58599314b59c96af49aa7fbac4b5e9e6746&X-Amz-SignedHeaders=host)](https://youtu.be/pBuDl2YqYCg)
 
 <br/>
+
 ##사용된 기술
 
 ####Front-end
